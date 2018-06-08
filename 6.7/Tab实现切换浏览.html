@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#div1{
+		border: 1px solid red;
+		width: 500px;
+		height: 300px;
+	}
+	ul li{
+		list-style: none;
+		float: left;
+		width: 98px;
+		height: 50px;
+		border: 1px solid red;
+		text-align: center;
+		line-height: 50px;
+	}
+	ul{
+		height:50px;
+	}
+	#d1,#d2,#d3,#d4{
+		display: none;
+	}
+	#d1{
+		display: block;
+	}
+</style>
+<script type="text/javascript">
+	function fn(n,m){		
+		for (var i = 1; i <= 4; i++) {
+			var allli = document.getElementById("li"+i);
+			allli.style.border = "1px solid red";
+			var alldiv = document.getElementById("d"+i);
+			alldiv.style.display = "none";
+		}
+		n.style.borderBottom = "white";
+
+		var div = document.getElementById("d"+m);
+		div.style.display = "block";
+	}
+</script>
+</head>
+<body>
+    	<div id="div1">
+    		<ul>
+    			<li id="li1" onmouseover="fn(this,1)">国际新闻</li>
+    			<li id="li2" onmouseover="fn(this,2)">国内新闻</li>
+    			<li id="li3" onmouseover="fn(this,3)">体育新闻</li>
+    			<li id="li4" onmouseover="fn(this,4)">娱乐新闻</li>
+    			<li></li>
+    		</ul>
+    		<div id="d1">
+    			<b>国际新闻</b><br>
+    			<p>奥巴马又踹门了！</p><br>
+    			<p>石油又涨价了！</p><br>
+    		</div>
+    		<div id="d2">
+    			<b>国内新闻</b><br>
+    			<p>习大大说：good good study, day day up!</p><br>
+    			<p>国内专家门说：good good study, day day up!</p><br>
+    		</div>
+    		<div id="d3">
+    			<b>体育新闻</b><br>
+    			<p>姚明，詹姆斯，科比要来中国打比赛了!</p><br>
+    			<p>大罗，小罗，小小罗要来中国踢球了!</p><br>
+    		</div>
+    		<div id="d4">
+    			<b>娱乐新闻</b><br>
+    			<p>创造101这周要停更了!</p><br>
+    			<p>李晨这个大黑牛和范冰冰搞上了!</p><br>
+    		</div>
+    </div>
+</body>
+</html>

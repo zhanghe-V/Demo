@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html onclick="star(event)">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	function star(e){
+		var obj = document.createElement("img");
+		obj.src = "images/star.png";
+		obj.width = Math.floor(Math.random()*(70-10)+10);
+		var x = e.clientX;
+		var y = e.clientY;
+		obj.style.position = "absolute";
+		obj.style.top = y+"px";
+		obj.style.left = x+"px";
+		document.body.appendChild(obj);
+	}
+	
+</script>
+</head>
+<body>
+    
+</body>
+</html>

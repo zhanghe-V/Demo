@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript">
+	//打开页面之后，弹出用户使用的是什么浏览器
+	window.onload = init;
+	function init(){
+		var obj = navigator.userAgent;//获取了浏览器信息
+		if (obj.indexOf("Chrome") != -1) {
+			alert("用的是谷歌");
+		}
+		else if (obj.indexOf("Firefox") != -1) {
+			alert("火狐");
+		}
+		else if (obj.indexOf("IE") != -1){
+			alert("IE");
+		}
+		else{
+			alert("不知道");
+		}
+	}
+	var obj = document.getElementById("id");
+</script>
+</head>
+<body>
+    
+</body>
+</html>

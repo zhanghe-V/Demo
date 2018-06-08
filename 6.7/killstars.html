@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	#d2{
+		width: 100px;
+		height: 20px;
+		border: 1px solid red;
+		display: inline-block;
+	}
+	#d3{
+		display: inline-block;
+		background: yellow;
+		height: 20px;
+	}
+</style>
+<script type="text/javascript">
+	//window.onload = init;
+	
+	var countstar = 0;//控制星星个数变量
+	var timerStar;//生成星星定时器
+	var timerGameTime
+	var t = 0;//记录时间变量
+	//开始游戏的函数
+	function startGame(){
+		window.clearInterval(timerStar);
+		window.clearInterval(timerGameTime);
+		timerStar = window.setInterval("star()",500);
+		timerGameTime = window.setInterval("time()",1000);	//记录游戏时间
+	}
+
+	//创建星星的函数
+	function star(){
+		var obj = document.createElement("img");
+		obj.src = "images/star.png";
+		obj.width = Math.floor(Math.random()*60+20);
+		obj.style.position = "absolute";
+		obj.style.left = Math.floor(Math.random()*1700+100)+"px";
+		obj.style.top = Math.floor(Math.random()*500+30)+"px";
+		document.body.appendChild(obj);
+		countstar++;
+		var sp = document.getElementById("d3");
+		sp.style.width = countstar*10+"px";
+
+		if (countstar > 10) {
+			alert("游戏结束");
+			window.clearInterval(timerStar);
+			location.reload();
+		}
+		obj.onclick = removeStar;
+	}
+
+	//点击删除星星的函数
+	function removeStar(){
+		this.parentNode.removeChild(this);
+		countstar --;
+		var sp = document.getElementById("d3");
+		sp.style.width = countstar*10+"px";
+	}
+
+	//点击暂停游戏的函数
+	function pauseGame(){
+		alert("游戏已暂停，点击确定继续游戏。");
+	}
+	
+	//记录游戏时间的函数
+	function time(){
+		t++
+		var obj = document.getElementById("d1");
+		obj.innerHTML= "游戏进行了"+t+"秒";
+	}
+</script>
+</head>
+<body>
+    <input type="button" value="开始游戏" onclick="startGame()" name="">
+    <input type="button" value="暂停游戏" onclick="pauseGame()" name="">
+    <span id="d1">游戏进行了0秒</span>
+    <span id="d2"><span id="d3"></span></span>
+</body>
+</html>

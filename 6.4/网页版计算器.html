@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript">
+	function caculate(){
+		var a1 = document.getElementById("text1").value;
+		var a2 = document.getElementById("text2").value;
+		var a3 =document.getElementById("text3");
+		a1 = parseFloat(a1);
+		a2 = parseFloat(a2);
+		var operator = document.getElementById("fuhao").value;
+		var result;
+		switch(operator){
+			case "+":
+			result = a1 + a2;
+			break;			
+			case "-":
+			result = a1 - a2;
+			break;			
+			case "*":
+			result = a1 * a2;
+			break;			
+			case "/":
+			result = a1 / a2;
+			break;
+		}
+		a3.value = result;
+
+	}
+</script>
+</head>
+<body>
+    <input type="text" id="text1" >
+    <select name="" id="fuhao">
+    	<option value="+">+</option>
+    	<option value="-">-</option>
+    	<option value="*">*</option>
+    	<option value="/">/</option>
+    	option
+    </select>
+    <input type="text" id="text2">
+    =
+    <input type="text" id="text3" name="">
+    <input type="button" value="点击计算" onclick="caculate()">
+</body>
+</html>
