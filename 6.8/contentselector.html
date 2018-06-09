@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="div1">
+    	111
+    </div>    
+    <div id="div2">
+    	222
+    </div>    
+    <div id="div3">333</div>    
+    <div id="div4">
+    	444
+    	<p>1</p>
+    </div>
+    <input type="button" value="点击" name="">
+    <script type="text/javascript">
+    	$("input").click(function(){
+    		//$("div:contains('333')").css({background:"red"});
+    		$("div:has(p)").css({background:"red"});
+    	});
+    </script>
+</body>
+</html>

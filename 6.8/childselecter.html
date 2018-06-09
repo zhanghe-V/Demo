@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li>aa</li>
+		<li>bb</li>
+		<li>cc</li>
+		<li>dd</li>
+		<li>ee</li>
+		<li>ff</li>
+	</ul>
+    <input type="button" name="" value="点击">
+    <script type="text/javascript">
+    	$("input").click(function(){
+    		//$("li:first-child").css({background:"red"});
+    		//$("li:nth-child(2)").css({background:"red"});    		
+    		//$("li:last-of-type").css({background:"pink"});
+    		$("li:nth-last-child(2)").css({background:"red"});
+    		$("li:nth-last-of-type(3)").css({background:"pink"});
+    	});
+
+    </script>
+</body>
+</html>

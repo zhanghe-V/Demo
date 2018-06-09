@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="替换class//切换QQ空间模拟">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	.div1{
+		width: 200px;
+		height: 100px;
+		background: red;
+	}	
+	.div2{
+		width: 200px;
+		height: 100px;
+		background: blue;
+	}	
+	.div3{
+		width: 200px;
+		height: 100px;
+		background: #50ED11FF;
+	}
+
+</style>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div class="div1">
+		
+	</div>
+    <input type="button" name="" value="布局1" id="a1">
+    <input type="button" name="" value="布局2" id="a2">
+    <input type="button" name="" value="布局3" id="a3">
+    <script type="text/javascript">
+    	$("#a1").click(function(){
+    		$("div").removeClass("div2");
+    		$("div").removeClass("div3");
+    		$("div").addClass("div1");
+    	});    	
+    	$("#a2").click(function(){
+    		$("div").removeClass("div1");
+    		$("div").removeClass("div3");
+    		$("div").addClass("div2");
+    	});    	
+    	$("#a3").click(function(){
+    		$("div").removeClass("div1");
+    		$("div").removeClass("div2");
+    		$("div").addClass("div3");
+    	});
+    </script>
+</body>
+</html>

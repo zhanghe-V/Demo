@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="属性操作">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<img src="a.jpg" alt="">
+    <input type="button" name="" value="点击">
+    <script type="text/javascript">
+    	$("input").click(function(){
+    		//console.log($("img").attr('src'));
+    		//$("input").attr("value","aaa");
+    		//$("input").attr({value:"aaa",type:"text"});
+    		//$("input").attr('value',function(){return "onclick"});
+    		//$("img").attr({"src":"b.jpg"});
+    		$("input").removeAttr('value');
+    	});
+    </script>
+</body>
+</html>
