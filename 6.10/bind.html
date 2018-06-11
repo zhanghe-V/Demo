@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="事件绑定">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div>这是DIV</div>
+    <input type="button" name="" value="点击">
+    <script type="text/javascript">
+    	/*$("input").bind("click",function(){	//bind实现事件绑定；
+    		alert("这是bind事件");
+    	});*/
+
+    	/*$("input").on("click",function(){		//on也可以实现事件绑定；二者作用相同
+    		alert("这是bind事件");
+    	});*/
+
+    	/*$("div").bind('mouseover', function() {
+    		$("div").html("这是mouseover");
+    	});*/
+
+    	/*$("div").bind({"mouseover":function(){//bind可以同时绑定多个事件
+    		$("div").html("这是mouseover");
+    	},"mouseout":function(){
+    		$("div").html("这是mouseout");
+    	}});*/
+
+    	/*$("input").click(function(){		
+    		$("div").unbind("");				//unbind实现事件解绑；
+    	});*/
+
+    	/*$("input").click(function(){
+    		$("div").off("");					//off实现数据解绑，二者作用相同；
+    	});*/
+
+    	$("input").one("click",function(){		//one实现数据绑定，只会执行一个
+    		alert("这是one事件绑定");
+    	});
+    </script>
+</body>
+</html>

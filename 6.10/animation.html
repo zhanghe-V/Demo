@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="简易动画">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		background: red;
+	}
+</style>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div>
+    	
+    </div>
+    <input type="button" name="" value="点击show" id="d1">
+    <input type="button" name="" value="点击hide" id="d2">
+    <input type="button" name="" value="点击切换" id="d3">
+    <script type="text/javascript">
+    	$("#d1").click(function(){	
+    	//.show()实现显示，后面可以增加一个回调函数，当显示完成时自动调用；
+    		$("div").show(1000,function(){alert("显示完成")});
+    	});    	
+    	$("#d2").click(function(){	
+    	//.hide()实现隐藏，后面可以增加一个回调函数，当隐藏完成时自动调用；
+    		$("div").hide(1000,function(){alert("隐藏完成")});
+    	});    	
+    	$("#d3").click(function(){		
+    	//.toggle()实现现实和隐藏的切换，后面可以增加一个回调函数，当完成一次切换时自动调用；
+    		$("div").toggle(1000,function(){alert("切换完成")});
+    	});
+    </script>
+</body>
+</html>

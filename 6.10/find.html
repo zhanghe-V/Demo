@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="parent查找和find查找">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div>
+		<a href="" title="">链接</a>
+		<p>段落</p>    	
+    </div>
+    <input type="button" name="" value="点击">
+    <script type="text/javascript">
+    	$("input").click(function(){
+    		//$("a").parent().css("background","red");			//.parent查找父元素
+    		$("div").find("p").css("background","red");			//.find在子元素中查找
+    	});
+    </script>
+</body>
+</html>

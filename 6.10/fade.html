@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="简易动画">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		background: red;
+	}
+</style>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div>
+    	
+    </div>
+    <input type="button" name="" value="点击fadeIn" id="d1">
+    <input type="button" name="" value="点击fadeOut" id="d2">
+    <input type="button" name="" value="点击fadeToggle" id="d3">
+    <input type="button" name="" value="点击fadeTo" id="d4">
+    <script type="text/javascript">
+		$("#d1").click(function(){
+		//.click()实现淡入效果，后面可以增加一个回调函数，当显示完成时自动调用；
+			$("div").fadeIn(3000,function(){
+				alert("fadeIn is OK");
+			});
+		});
+
+		$("#d2").click(function(){
+		//.click()实现淡出效果，后面可以增加一个回调函数，当显示完成时自动调用；
+			$("div").fadeOut(3000);
+		});		
+
+		$("#d3").click(function(){
+		//.click()实现淡出/淡出效果，后面可以增加一个回调函数，当显示完成时自动调用；
+			$("div").fadeToggle(3000);
+		});		
+
+		$("#d4").click(function(){
+		//.fadeTo()实现淡出/淡出效果，参数（时间，显示程度，回调函数）；
+			$("div").fadeTo(3000,0.2,function(){
+				alert("ok");
+			});
+		});
+    </script>
+</body>
+</html>

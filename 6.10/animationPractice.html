@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	dt{
+		background: #2FF509FF;
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		margin: 10px;
+	}
+	dd{
+		margin-left: 10px;
+	}
+</style>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <dl id="d1">
+    	<dt>收藏夹</dt>
+    	<dd>桌面</dd>
+    	<dd>最近访问</dd>
+    </dl>
+    <dl id="d2">
+    	<dt>这台电脑</dt>
+    	<dd>视频</dd>
+    	<dd>文档</dd>
+    	<dd>图片</dd>
+    	<dd>音乐</dd>
+    	<dd>下载</dd>
+    </dl>
+    <dl id="d3">
+    	<dt>网络</dt>
+    	<dd>网络1</dd>
+    	<dd>网络2</dd>
+    	<dd>网络gg</dd>
+    </dl>
+    <script type="text/javascript">
+    	$("dt").click(function(){
+    		$(this).parent().children("dd").toggle();
+    	});
+    </script>
+</body>
+</html>
