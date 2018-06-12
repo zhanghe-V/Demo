@@ -1,0 +1,106 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="utf-8">  
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+<title>Examples</title>  
+<meta name="description" content="">  
+<meta name="keywords" content="">  
+<link href="" rel="stylesheet">  
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<style type="text/css">  
+    div{  
+        border: 1px solid red;  
+        width: 660px;  
+    }  
+    div ul{  
+        float: right;  
+    }  
+    ul li{  
+        list-style: none;  
+        border: 1px solid black;  
+        width: 18px;  
+        height: 22px;  
+        text-align: center;  
+        text-height: 22px;  
+    }  
+</style>  
+<script type="text/javascript">  
+    //页面加载完成之后让图片动起来  
+    //window.onload = init;  
+    var i = 1;  
+    var timer;  
+    /*function init(){  
+        var obj = document.getElementById("li1");  
+        obj.style.background = "orange";  
+        timer = window.setInterval("tupian()",500);  
+    }  */
+    $(function(){
+    	var obj = document.getElementById("li1");  
+        obj.style.background = "orange";  
+        timer = window.setInterval("tupian()",500);  
+    })
+  
+    //让图片切换的函数  
+    function tupian(){  
+        //获取img对象  
+        var obj = document.getElementById("d1");  
+        i++;  
+        //自己写的，%6取余思想，略微绕完了  
+        //i = i%6;            
+        //if (i == 0)   
+        //  i++;  
+        //推荐写法：当溢出时，重新给i赋值为1；     
+        if (i>5) {  
+            i = 1;  
+        }     
+        obj.src = "images/"+i+".png";  
+        clearlicolor();  
+        var licolor = document.getElementById("li"+i);  
+        licolor.style.background = "orange";  
+    }  
+  
+    //鼠标放上停止切换  
+    function stopTo(){  
+        window.clearInterval(timer);  
+    }  
+    //鼠标离开继续切换  
+    function starTo(){  
+        timer = window.setInterval("tupian()",500);  
+  
+    }  
+    function tingtu(e){  
+        var obj = document.getElementById("d1");  
+        //obj.src = "images/1.png";  
+        var num = e.innerHTML;  
+        i = num;  
+        obj.src = "images/"+num+".png";  
+        clearlicolor();  
+        e.style.background = "orange";  
+        window.clearInterval(timer);  
+    }  
+  
+    //清除所有标签的背景颜色  
+    function clearlicolor(){  
+        for (var i = 1; i <= 5; i++) {  
+            var objli = document.getElementById("li"+i);  
+            objli.style.background = "white";  
+        }  
+    }  
+  
+</script>  
+</head>  
+<body>  
+    <div>  
+        <img id="d1" src="images/1.png" onmouseover="stopTo()" onmouseout="starTo()">  
+        <ul>  
+            <li id="li1" onmouseover="tingtu(this)" onmouseout="starTo()">1</li>  
+            <li id="li2" onmouseover="tingtu(this)" onmouseout="starTo()">2</li>  
+            <li id="li3" onmouseover="tingtu(this)" onmouseout="starTo()">3</li>  
+            <li id="li4" onmouseover="tingtu(this)" onmouseout="starTo()">4</li>  
+            <li id="li5" onmouseover="tingtu(this)" onmouseout="starTo()">5</li>  
+        </ul>  
+    </div>  
+      
+</body>  
+</html>  

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-06-11 20:12:16
+ * @version $Id$
+ */
+*{
+	padding: 0px;
+	margin: 0px;
+}
+#container{
+	position: relative;
+}
+.box{
+	padding: 5px;
+	float: left;
+}
+.box_img{
+	padding: 5px;
+	border: 1px solid #595959FF;
+	box-shadow: 0 0 5px #ccc; /*阴影效果*/
+	border-radius: 5px;/*圆角效果*/	
+}
+.box_img img{
+	width: 150px;
+	height: auto;
+}
