@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>图片预加载之无序加载</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript">
+	var imgs = [
+ 		'http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F0e2442a7d933c8950db7aff3dd1373f083020068.jpg',
+ 		'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1529417099374&amp;di=18425b2189eb5a4a8896e0f20c4677ba&amp;imgtype=0&amp;src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fb21c8701a18b87d62fac9f980b0828381e30fd4e.jpg',
+ 		'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1529417099374&amp;di=ba30ea519eacff65716fab00e30531e0&amp;imgtype=0&amp;src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F9213b07eca806538c066018c9bdda144ac3482a5.jpg',
+ 		'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1529417099373&amp;di=3bc4cd039c7b9e1e27ea87672edbe3dc&amp;imgtype=0&amp;src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F8694a4c27d1ed21b8b195967a16eddc450da3f5b.jpg'
+
+ ];
+	var index = 0,
+	 	 len = imgs.length;
+	$(".btn").click(function() {
+	 	/* Act on the event */
+	 	alert("sss");
+	 	if ('prev' === $(this).data('control')) {
+	 		//上一张
+	 		index = Math.max(0,--index);
+	 		alert(sss);
+	 	}
+	 	else{//下一张
+	 		index = Math.min(len - 1, ++index);
+	 		alert(vvv);
+	 	}
+	 	document.title = (index + 1) + "/" + len;
+
+	 	$('#img').attr('src', imgs[index]);
+	});
+
+	 /*$(".btn").on('click',function(){
+	 	if ('prev' === $(this).data('control')) {
+	 		//上一张
+	 		index = Math.max(0,--index);
+	 		alert(sss);
+	 	}
+	 	else{//下一张
+	 		index = Math.min(len - 1, ++index);
+	 		alert(vvv);
+	 	}
+	 	document.title = (index + 1) + "/" + len;
+
+	 	$('#img').attr('src', imgs[index]);
+	 });*/
+</script>
+<style type="text/css">
+	a{
+		text-decoration: none;
+	}
+	.box{
+		text-align: center;
+	}
+	.btn{
+		display: inline-block;
+		height: 30px;
+		line-height: 30px;
+		border: 1px solid #ccc;
+		background-color: #fff;
+		padding: 0 10px;
+		margin-right: 50px;
+		color: #333;
+
+	}
+	.btn:hover{
+		background-color: #eee;
+	}
+</style>
+</head>
+<body>
+    <div class="box">
+    	<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1529416748171&amp;di=cb317ed84d96e6f6d8612d409fb35888&amp;imgtype=0&amp;src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fb64543a98226cffc9d56fb38b5014a90f603ea38.jpg" alt="pic" id="img" width="300">    	
+    	<p>
+    		<a href="javascript:;" title="" class="btn" data-control="prev">上一页</a>
+    		<a href="javascript:;" title="" class="btn" data-control="next">下一页</a>
+    	</p>
+    </div>
+</body>
+</html>
