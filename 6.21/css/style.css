@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-06-21 16:27:52
+ * @version $Id$
+ */
+/*边框类型
+solid 实线
+dashed 虚线
+dotted 点状
+double 双线边框*/
+#d1,#d2,#d3,#d4{
+	margin:auto;
+
+}
+#d1{
+	width: 1000px;
+	height: 700px;
+	background-color: pink;
+	border: 5px solid blue;
+}
+#d2{
+	margin-top: 35px;
+	width: 800px;
+	height: 600px;
+	background-color: #E2DD1CFF;
+	border: 5px dashed blue;
+}
+#d3{
+	margin-top: 35px;
+	width: 600px;
+	height: 500px;
+	background-color: #14EA2FFF;
+	border: 5px dotted blue;
+}
+#d4{
+	margin-top: 80px;
+	width: 450px;
+	height: 300px;
+	background-color: #542DD1FF;
+	border: 5px double blue;
+}

@@ -1,0 +1,10 @@
+@charset "utf-8";
+/*选择符{属性：属性值;属性：属性值}
+选择符：所设置样式的对象
+声明：属性：属性值
+元素选择符：直接将标签的名字作为选择符-元素选择符/类型选择符
+border:宽度    类型   颜色；-顺序可以颠倒
+border:30px  #f00  solid;
+solid-实线  dashed-虚线  dotted-点状  double-双线边框
+*/
+div{width:300px;height:400px;background:#CF0;color:#f00;border:10px dotted #FC0}
