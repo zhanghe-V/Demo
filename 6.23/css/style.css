@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-06-23 14:43:37
+ * @version $Id$
+ */
+ *{
+ 	margin: 0px;
+ 	padding: 0px;
+ }
+ body{
+ 	font: 14px "微软雅黑";
+ }
+
+ .header{
+ 	background-color:#232323;
+ }
+.wrapper{
+	width: 1012px;
+	margin: 0 auto;
+}
+.logo,.nav{
+	float: left;
+}
+.logo{
+	font-size: 0;
+}
+.logo a{
+	display: block;
+}
+.nav li{
+	float: left;
+	list-style: none;
+	height: 62px;
+	line-height: 62px;
+	padding: 0 15px;
+	text-align: center;
+	background: url(../images/qf_nav_bg.png) no-repeat right center;
+}
+.nav .nav_lilast{
+	background:none;
+}
+.nav li:hover{
+	background: #FF5600FF;
+}
+.clearbox{
+	clear: both;
+}
+.wrapper .nav a{
+	text-decoration: none;
+	color: white;
+}
+.banner{
+	width: 100%;
+	font-size: 0;
+}
+/*主体内容*/
+#main-top{
+	background-color: #f5f5f5;
+	padding: 35px 0 28px;
+}
+.content-li li{
+	float: left;
+	list-style: none;
+}
+.content-li a{
+	text-decoration: none;
+	text-align: center;	
+}
+#main-top .main-t-li1{
+	width: 260px;
+	border-right: 1px solid  #dde5f0;
+}
+#main-top .main-t-li2{
+	width: 253px;
+	border-right: 1px solid  #dde5f0;
+	border-left: 1px solid  white;
+}
+#main-top .main-t-li3{
+	width: 250px;
+	border-right: 1px solid  #dde5f0;
+	border-left: 1px solid  white;
+}
+#main-top .main-t-li4{
+	width: 227px;
+	border-left: 1px solid  white;
+}
+#main-top li a{
+	padding: 121px 0 40px;
+	display: block;
+}
+#main-top h2{
+	color: #242e38;
+	font-size: 22px;
+	line-height: 31px;
+}
+#main-top h3{
+	color: #546b7d;
+	font-size: 14px;
+	line-height: 40px;
+	padding-bottom: 2px;
+}
+#main-top p{
+	color: #a3bdca;
+	line-height: 18px;
+}
+/**/
+#main-bottom{
+	padding: 40px 0;
+}
+.classroom{
+	border: 1px solid #dddddd;
+	padding: 1px;
+	width: 298px;
+}
+.classroom img{
+	display: block;
+	margin: 0 auto;
+	float: left;
+}
+.news{
+	width: 355px;
+	float: left;
+	padding: 0 18px 0 15px;
+	border-right: 1px solid #dddfde;
+}
+.news h2{
+	line-height: 35px;
+}
+.news h3{
+	line-height: 30px;
+}
+.news p{
+	text-indent: 24px;	
+}
+.news ul{
+	padding-top: 18px;
+	list-style: none;
+}
+.news ul li{
+	line-height: 14px;
+	
+}
+.classplan{
+	padding-bottom: 13px;
+	border-bottom: 1px dotted #cccccc; 
+}
+.contact{
+	width: 297px;
+	float: left;
+	padding-left: 23px;
+}
+#contact-img{
+	display: block;
+	width: 110px;
+	height: 24px;
+	background: url(../images/qf_list_bg.png) no-repeat -32px -240px;
+}
