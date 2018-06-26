@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0}
+div{width:400px;height:400px;background:#33F;text-align:center}
+p{width:103px;height:107px;background:#CF0; display:inline-block; vertical-align:middle;}
+span{ display:inline-block; vertical-align:middle;height:100%;width:0}
+/*
+vertical-align:设置元素和同级元素之间的垂直的对齐方式
+行内元素可以当成文本处理
+*/
+</style>
+</head>
+<body>
+<div>
+   <p></p><span></span>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-06-25 14:52:29
+ * @version $Id$
+ */
+.clearbox{
+	clear: both;
+}
+ul{
+	border-bottom: 8px solid #E88C16FF;
+}
+li{
+	float: left;
+	list-style: none;
+}
+li a{
+	text-decoration: none;
+	width: 100px;
+	height: 20px;
+	display: block;
+	background-color: #4F4F4FFF;
+	color: white;
+	text-align: center;
+	line-height: 20px;
+	border-right: 1px solid white;
+}
+a:hover{
+	background-color: #E88C16FF;
+}
+span{
+	display: none;
+}
+li a:hover span{
+	display: block;
+}
+li a:hover em{
+	display: none;
+}

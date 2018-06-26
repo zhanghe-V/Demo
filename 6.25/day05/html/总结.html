@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+1. margin:
+margin-left/top/bottom/right
+margin:1 2 3 4;
+
+(1)给子元素设置margin-top时会影响父元素一起向下移动（margin-top）
+给父元素或者子元素添加浮动
+
+(2)margin值可以设置负值padding不可以设置负值
+
+(3)两个同级元素都设置了margin值，margin值会重叠(没有设置过浮动的两个同级元素）
+设置过浮动的两个同级元素都设置margin值，margin值不会重叠
+
+2. overflow:设置内容溢出如何显示
+    visible
+    hidden
+    scroll
+    auto
+3. white-space: 设置空白符如何显示
+    nowrap：强制文本在一行内显示
+4. text-overflow:clip ellipsis
+     
+5. 如何显示省略号 
+width  overflow:hidden white-space:nowrap text-overflow:ellipsis
+    
+6. 给父元素设置overflow：hidden可以解决高度塌陷问题；
+    bfc
+    
+7.给子元素设置margin-top影响父元素一起向下移动
+   给父元素设置overflow：hidden --bfc
+   给父元素以及子元素设置浮动；
+      
+8. > 权重是0   
+
+9. 块状元素
+    以块的形式显示
+    自占一行
+    可以设置宽度和高度
+    作为容器使用（盒子）
+10. 行内元素
+     内联级元素在一行内逐个显示；
+     不能定义它的宽和高
+     遵循盒模型基本规则，但个别属性不能正确显示
+11. 可变元素：需要根据上下文关系确定该元素是块元素或者内联元素
+12. 行内元素使用border margin padding时，上下显示不正确,左右正确
+13. display:none/block/inline/list-item/inline-block/table/inline-table
+14.
+块状级：block list-item table
+行内级：inline inline-block（img a input span） inline-table
+可变：没有
+15.inline-block:img input select textarea button
+16. vetical-align的应用；
+
+作业：练习要完成
+          千锋页面跟我的统一
+          nav4.jpg:导航
+          secoo0.png-vertical-align
+          
+          
+          
+</body>
+</html>

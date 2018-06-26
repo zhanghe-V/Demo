@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-06-25 19:41:54
+ * @version $Id$
+ */
+li{
+	list-style: none;
+	float: left;
+	height: 100px;	
+}
+ul{
+	width: 1020px;
+	margin: 0 auto;
+	background-color: #62DE20FF;	
+}
+
+li a{
+	padding: 10px;
+}
+li img{
+	vertical-align: middle;
+}
+span{
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+li:hover{
+	background-image: url(../项目/bg.png);
+	background-repeat: no-repeat;
+}

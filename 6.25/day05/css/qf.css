@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0}
+a{text-decoration:none}
+li{list-style:none}
+body{font:14px "微软雅黑"}
+img{border:none}
+h1,h2,h3,h4,h5,h6{font-weight:normal}
+.wrapper{margin:0 auto;width:1012px;}
+/*
+图片在块状元素中，会将盒子在自身高度的基础上撑大3-5px；
+给包含了图片的盒子设置font-size:0
+图片放在超链接中，在IE的低版本浏览器中会出现边距
+给img设置border:none
+padding:是内边距
+padding:100px  上下左右的内边距都是100px
+padding:10px 100pxd  上下是10px左右是100px
+*/
+/*-----------header-------------*/
+#header{background:#232323}
+#header h1{font-size:0}
+#header h1,#header ul{float:left}
+#header ul li{float:left;background:url(file:///E|/html-1804/day04/img/qf_nav_bg.png) no-repeat right center}
+#header li>a{color:#fff;padding:0 15px;height:62px;line-height:62px; display:block}
+#header li:hover{background:#fd8200}
+#header .no_bg{background:none}
+/*-----------banner-------------*/
+#banner img{width:100%}
+#banner{font-size:0}
+/*子选择符  >
+选择符1       选择符2{color:#09C}
+选择符1  >  选择符2{color:#09C}
+display:设置元素的显示类型
+block：将元素设置为块状元素
+inline：将元素设置为行内元素
+*/
+/*------------------main-top---------------*/
+#main-top{background:#f5f5f5;padding:35px 0 28px}
+#main-top li{float:left;text-align:center;}
+#main-top .main-t-li1{width:260px;border-right:1px solid #dde5f0}
+#main-top .main-t-li2{width:253px;border-left:1px solid #fff;border-right:1px solid #dde5f0}
+#main-top .main-t-li3{width:250px;border-left:1px solid #fff;border-right:1px solid #dde5f0}
+#main-top .main-t-li4{width:227px;border-left:1px solid #fff;}
+#main-top li a{padding:121px 0 40px; display:block}
+#main-top h2{color:#252e3d;font-size:22px;line-height:31px; font-weight:bold}
+#main-top h3{color:#536d7e;font-size:14px;line-height:40px;padding-bottom:2px}
+#main-top p{color:#a3becf;line-height:18px}
+/*------------------main-bot---------------*/
+#main-bot{overflow:hidden;padding:40px 0}
+#main-bot h2{color:#222;font-size:20px;line-height:24px;}
+#main-bot .wrapper > div{float:left}
+#main-bot .m-b-img{border:1px solid #dddddd;padding:1px;background:#fff}
+#main-bot .m-b-news{padding-left:15px;width:320px}
+#main-bot .m-b-news h3{font-size:16px;line-height:20px;padding:10px 0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.m-b-news h3 a{color:#444;}
+.m-b-news p{color:rgb(153,153,153);font-size:12px;line-height:18px;text-indent:2em;padding-bottom:10px;border-bottom:1px dashed rgb(153,153,153);margin-bottom:14px}
+.m-b-news li{line-height:20px;padding:3px 0 3px 12px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;background:url(../img/news_jt.png) no-repeat left center}
+.m-b-news li a{color:#444;}
+.m-b-line{background:#dddfde;width:1px;height:220px;margin:4px 23px 0 18px}
+.m-b-w{margin:14px 0 22px}
+.m-b-w a{width:109px;height:25px; display:block/*转换成块状元素*/;background:url(../img/qf_list_bg.png) no-repeat -31px -239px}
+.talk-phone-num1{font-size:24px;color:#666;padding-bottom:10px}
+.talk-phone-num2{line-height:24px;color:#666}
+/*-------footer------------------*/
+#footer-t{background:#222;height:300px}
+#footer-b{background:#101010;color:#999;line-height:45px;text-align:center}
+
+
+
+
+
