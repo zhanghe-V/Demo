@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+*{margin:0;padding:0}
+a{text-decoration:none}
+li{list-style:none}
+body{font:14px "微软雅黑"}
+img{border:none}
+h1,h2,h3,h4,h5,h6{font-weight:normal}
+em,b,stong,i{font-weight:normal;font-style:normal}
+.wrapper{margin:0 auto;width:1012px;}

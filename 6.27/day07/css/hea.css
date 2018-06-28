@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----------header-------------*/
+#header{background:#232323}
+#header h1{font-size:0}
+#header h1,#header ul{float:left}
+#header ul li{float:left;background:url(file:///E|/html-1804/day04/img/qf_nav_bg.png) no-repeat right center}
+#header li>a{color:#fff;padding:0 15px;height:62px;line-height:62px; display:block}
+#header li:hover{background:#fd8200}
+#header .no_bg{background:none}
+
+/*-------footer------------------*/
+#footer-t{background:#222;height:300px}
+#footer-t .wrapper > div{float:left}
+#footer-t .f-b-list{width:493px;padding-top:45px;height:169px;font:12px/24px "宋体";background:url(../img/qf_bot_line.png) no-repeat right top}
+#footer-t .f-b-list > div{float:left;padding:0 30px 0 10px;text-align:center}
+.f-b-list > div h3{color:#fff;padding-bottom:12px}
+.f-b-list > div a{color:#999}
+#footer-t .f-b-position{width:290px;background:url(../img/qf_map.png) no-repeat center 28px;height:214px}
+#footer-t .f-b-chawet{width:175px;padding-left:20px;text-align:center;background:url(../img/qf_bot_line.png) no-repeat left top;}
+.f-b-chawet div{padding-top:20px}
+.f-b-chawet p{color:#464646;line-height:18px;font-size:12px}
+#footer-b{background:#101010;color:#999;line-height:45px;text-align:center}
+
+
+
+
+
+
