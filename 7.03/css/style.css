@@ -1,0 +1,294 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-07-03 15:18:14
+ * @version $Id$
+ */
+ body,div,dl,dd,dt,form,fieldset,input,p,h1,h2,h3,h4,h5,h6{
+ 	margin:0;
+ 	padding:0;
+ }
+ li{
+ 	list-style:none;
+ }
+ a{
+ 	text-decoration:none;
+ }
+ body{
+ 	font:14px "微软雅黑";
+ }
+ .left{
+ 	float:left;
+ }
+ .right{
+ 	float:right;
+ }
+ .clear:after{
+ 	content:"";
+ 	clear:both;
+ 	display:block;
+ 	height:0;
+ 	overflow:hidden; 
+ 	visibility:hidden;}
+ img{
+ 	border:0; 
+ 	display:block;
+ }
+ fieldset{
+ 	border:0;
+ }
+ .wrapper{
+ 	 width: 911px;
+ 	 margin: 0 auto;	
+ }
+ .header{
+ 	width: 100%;
+ 	background-color: #f03b6e;
+ 	position: relative;
+ }
+ .header .wrapper{
+ 	position: relative;
+ }
+ .hr_img{
+ 	position: absolute;
+	right: 0;
+	top: 0;
+ }
+ body{
+    background: url(../世纪佳缘网/body_bg.jpg); 	
+ }
+ .logo{
+ 	padding-left: 60px;
+ }
+ /*.welcom,.messages,.count{
+ 	width: 572px;
+ 	border-bottom: 1px solid #ccc;
+ 	padding-bottom: 20px;
+ }*/
+ .content .wrapper{
+ 	background: url(../世纪佳缘网/main_bg2.jpg)no-repeat bottom,url(../世纪佳缘网/main_bg.jpg)repeat-y;
+ }
+ .main_top_nav{
+	width: 727px;
+	margin: 0 auto;
+	padding-top: 50px;
+ }
+ .main_top_nav li{
+ 	float: left;
+ 	height: 30px;
+ 	line-height: 30px;
+ 	position: relative;
+ }
+ .main_top_nav li a{
+ 	padding: 0 20px;
+ }
+ .main_top_nav li span{
+ 	display: block;
+ 	width: 5px;
+ 	height: 30px;
+ 	position: absolute;
+	top: 0;
+	right: 0;
+ }
+ .main_top_nav li:nth-of-type(1){
+ 	background: url(../世纪佳缘网/tab_bg2.png);
+ 	margin: 0 10px 0 66px;
+ }
+ .main_top_nav li:nth-of-type(1) a{
+ 	color: #fff;
+ }
+ .main_top_nav li:nth-of-type(1) span{
+ 	background: url(../世纪佳缘网/tab_bg2.png)no-repeat right top
+ }
+ .main_top_nav li:nth-of-type(2){
+ 	background: url(../世纪佳缘网/tab_bg1.gif);
+ }
+ .main_top_nav li:nth-of-type(2) a{
+ 	color: #000;
+ }
+ .main_top_nav li:nth-of-type(2) span{
+ 	background: url(../世纪佳缘网/tab_bg1.gif)no-repeat right top
+ }
+ .main_content{
+ 	width: 570px;
+ 	border: 1px solid #ccc;
+ 	margin: 0 auto;
+ 	padding: 45px 120px 0 35px;
+ }
+ .main_content h3{
+ 	color: #e65469;
+ 	font-size: 18px;
+ 	line-height: 38px;
+ }
+ .wel_selfintro{
+ 	font-size: 12px;
+ 	color: #666;
+ 	line-height: 22px;
+ 	margin-bottom: 20px;
+ }
+ .main_content fieldset{
+ 	border-top: 1px solid #e9e9e9;
+ }
+ .declaration{
+ 	font-size: 12px;
+ 	line-height:32px;
+ 	padding-top: 9px;
+ }
+ .declaration span{
+ 	color: #e72600;
+ }
+ .main_content dl{
+ 	line-height: 40px;
+ }
+ .main_content dl:after{
+ 	content: "";
+ 	display: block;
+ 	clear: both;
+ 	height: 0;
+ 	overflow: hidden;
+ 	visibility:hidden;
+ }
+ .main_content dt,.main_content dd{
+ 	float: left;
+ } 
+ .main_content dt{
+ 	width: 95px;
+ 	text-align: right;
+ }
+ .select88 select{
+	width: 88px;
+ }
+ .select108 select{
+	width: 108px;
+ } 
+ .gender label:nth-of-type(1){
+ 	margin-right: 10px;
+ }
+ .content .no_change{
+ 	float: right;
+ 	color: #876676;
+ 	width: 100px;
+ 	font-size: 12px;
+ }
+ .footer{
+ 	color: #876676;
+ 	line-height: 24px;
+ 	padding: 20px 0 32px;
+ 	font-size: 12px;
+ 	text-align: center;
+ }
+ .register_way{
+ 	margin-top: 9px;
+ }
+ .recommand_rw{
+ 	color: #666;
+ 	margin-left: 85px;
+ }
+ .input220 input{
+ 	width: 220px;
+ 	height: 30px;
+ 	border: none;
+ 	background: url(../世纪佳缘网/input_220.jpg);
+ }
+ .input150 input{
+ 	width: 150px;
+ 	height: 30px;
+ 	border: none;
+ 	background: url(../世纪佳缘网/input_150.jpg); 	
+ }
+ .input80 input{
+ 	width: 80px;
+ 	height: 30px;
+ 	border: none;
+ 	background: url(../世纪佳缘网/input_80.jpg);
+ }
+ .input150{
+ 	margin-bottom: 15px;
+ }
+ .heart_saying{
+ 	margin-top: 15px;
+ }
+ .heart_saying a{
+ 	display: block;
+ 	float: left;
+ 	width: 79px;
+ 	height: 29px;
+ 	background: url(../世纪佳缘网/intro2.png);
+ 	text-align: center;
+ 	line-height: 29px;
+ 	color: #666666;
+ 	margin: 0 3px;
+ }
+ .heart_saying .clear{
+ 	width: 380px;
+ 	border-bottom: 1px solid #e5e5e5;
+ }
+ .intro{
+ 	width: 470px;
+ 	height: 150px;
+ 	border: 1px solid #e5e5e5;
+ 	display: block;
+ 	margin-left: 95px;
+ }
+ .word_num{
+ 	display: block;
+ 	line-height: 20px;
+	margin: 8px 0 20px 95px;
+	
+ }
+ .word_num span{
+ 	color: red;
+ }
+ .agree{
+ 	color: #666;
+ 	margin-left: 95px;
+ }
+ .agree a{
+ 	color: #0063dc;
+ }
+ .agree a:hover{
+ 	color: #0026FFFF;
+ 	text-decoration: underline;
+ }
+ .submit{
+ 	display: block;
+ 	width: 278px;
+ 	height: 49px;
+ 	background: url(../世纪佳缘网/sub-btn1.jpg);
+ 	margin: 25px 0 50px 95px;
+ 	border: none;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
