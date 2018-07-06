@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css" media="screen">
+	li{
+		width: 200px;height: 40px;line-height: 40px;		
+	}
+	li a{
+		color: #303030FF;
+		text-decoration: none;background: url(../a.png) no-repeat;
+		padding-right: 30px;
+	}
+	li>a[title^="w3"]{
+		background-position: right -408px;;
+	}
+	li>a[title*="home"]{
+		background-position: right -379px;
+	}
+	li>a[title$="doc"]{
+		background-position:right 5px;
+	}
+	li>a[title$="ppt"]{
+		background-position:right -44px;
+	}
+</style>
+</head>
+<body>
+    <div>
+    	<ul>
+    		<li><a href="#" title="w3cpius.com">w3cpius.com</a></li>
+    		<li><a href="#" title="home">home</a></li>
+    		<li><a href="#" title="xxx.doc">xxx.doc</a></li>
+    		<li><a href="#" title="xxx.ppt">xxx.ppt</a></li>
+    	</ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css" media="screen">
+	.content{
+		margin:50px 0 0 150px;
+		width: 400px;
+		counter-reset: num_count 0;
+	}
+	.number{
+		width: 50px;
+		height: 50px;
+		margin:10px;
+		background: #2DD;
+		float: left;
+		border-radius: 50% 50%;
+	}
+	div[class=number]:nth-of-type(odd){
+		background: #4F0;
+	}
+	div[class=number]:nth-child(even){
+		background: #000;
+	}
+	.number{
+		counter-increment: num_count 1;
+		color: #fff;
+		text-align: center;
+		line-height: 50px;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	.number:before{
+		content: counter(num_count);
+	}
+
+</style>
+</head>
+<body>
+    <div class="content">
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    	<div class="number"></div>
+    </div>
+</body>
+</html>
