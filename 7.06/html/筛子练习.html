@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0}
+div{width:150px;height:142px;background:#e7e7e7;border-radius:8px;margin:20px 50px; display:flex;padding:4px 10px; box-shadow:8px -8px 0 0 #d7d7d7 inset,-8px 0 0 0 #d7d7d7 inset; box-sizing:border-box}
+/*width(border+padding+content)*/
+div span{display:block;width:25px;height:25px;background:#333333;border-radius:50%; box-shadow:0 5px 0 0 #111 inset,0 -5px 0 0 #555 inset}
+
+.box1{justify-content:center;align-items:center}
+.box2{justify-content:space-between;}
+.box2 span:nth-of-type(2){align-self:flex-end}
+.box3{justify-content:space-between}
+.box3 span:nth-of-type(2){align-self:center}
+.box3 span:nth-of-type(3){align-self:flex-end}
+.box4{flex-direction:column;justify-content:space-between}
+.box4 p{display:flex;justify-content:space-between}
+.box5 p:nth-of-type(2){justify-content:center}
+</style>
+</head>
+<body>
+<div class="box1">
+   <span></span>
+</div>
+<div class="box2">
+   <span></span>
+   <span></span>
+</div>
+<div class="box3">
+   <span></span>
+   <span></span>
+   <span></span>
+</div>
+<div class="box4">
+   <p><span></span><span></span></p>
+   <p><span></span><span></span></p>
+</div>
+<div class="box4 box5">
+   <p><span></span><span></span></p>
+   <p><span></span></p>
+   <p><span></span><span></span></p>
+</div>
+<div class="box4">
+   <p><span></span><span></span></p>
+   <p><span></span><span></span></p>
+      <p><span></span><span></span></p>
+
+</div>
+</body>
+</html>
