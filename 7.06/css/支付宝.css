@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-07-06 19:32:59
+ * @version $Id$
+ */
+ *{
+ 	margin: 0;
+ 	padding: 0;
+ 	box-sizing: border-box;
+ }
+ li{
+ 	list-style: none;
+ }
+ a{
+ 	text-decoration: none;
+ }
+ html{
+ 	height: 100%;
+ }
+ body{
+ 	display: flex;height: 100%;
+ 	flex-direction: column;
+ }
+ ul{
+ 	display: flex;
+ }
+ ul li{
+ 	width: 25%;
+ }
+ header{
+ 	height: 315px;
+ 	background: #3f454f;
+ }
+ .header_top{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	padding: 20px 30px;
+ 	font-size: 30px;
+ 	height: 83px;
+ }
+ .header_top i{
+ 	font-size: 44px;
+ 	vertical-align: middle;
+ }
+ .header_top a{
+ 	color: #fff;
+ }
+ .search_box a{
+ 	margin-left: 26px;
+ }
+ header li a{
+ 	color: #fff;
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+ 	font-size: 80px;
+ 	height: 232px;
+ 	justify-content: center;
+ }
+ header li span{
+ 	font-size: 30px;
+ 	margin-top: 10px;
+ }
+ section{
+ 	flex: 1;
+ 	background: #f5f5f9;
+ 	overflow: auto;
+ }
+
+ .main ul{
+ 	flex-wrap: wrap;
+ }
+ .main li a{
+ 	display: flex;
+ 	height: 180px;
+ 	flex-direction: column;
+ 	align-items: center;
+ 	justify-content: center;
+ 	color: #333;
+ 	font-size: 25px;
+ 	border-right: 1px solid #ccc;
+ 	border-bottom: 1px solid#ccc;
+ }
+ .main li i{
+ 	font-size: 55px;
+ }
+ .main li{
+ 	color: #f60;
+ }
+ .main li span{
+ 	margin-top: 10px;
+ }
+ .main .main_top{
+ 	background: #fff;
+ }
+ .main_img{
+ 	height: 170px;
+ 	border-top: 1px solid #ccc;
+ 	border-bottom: 1px solid #ccc;
+ 	margin: 30px 0;
+ 	display: flex;
+ }
+ .main_img img{
+ 	flex: 1;
+ }
+ footer{
+ 	height: 100px;
+ }
+ footer a{
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: center;
+ 	align-items: center;
+ 	height: 100px;
+	border-top: 1px solid #ccc;
+	color: #929292;
+	font-size: 26px;
+ }
+ footer a span{
+ 	margin-top: 6px;
+ }
+ footer a i{
+ 	font-size: 40px;
+ }
+ i[class*="zhuanzhang"]{
+ 	color: #2eb3e8;
+ }
+ i[class*="iconhongbao"]{
+ 	color: #f96268;
+ }
+ i[class*="yuebao"]{
+ 	color: #f96268;
+ }
+ i[class*="shoujichongzhi"]{
+ 	color: #2eb3e8;
+ }
+ i[class*="xinyongqiahuankuan"]{
+ 	color: #ffb359;
+ }
+ i[class*="zhimaxinyong"]{
+ 	color: #36bc99;
+ }
+ i[class*="jipiao"]{
+ 	color: #ffb359;
+ }
+ i[class*="taopiaopiaoicon"]{
+ 	color: #f96268;
+ }
+ i[class*="mayijubao"]{
+ 	color: #2eb3e8;
+ }
+ i[class*="appwaimai"]{
+ 	color: #f15a4a;
+ }
+ i[class*="tianmao"]{
+ 	color: #dd2727;
+ }
+ i[class*="shenghuojiaofei"]{
+ 	color: #2eb3e8;
+ }
+ i[class*="fuwuchuang"],i[class*="jiayou"]{
+ 	color: #76c9b9;
+ }
+ i[class*="jipiao"],i[class*="jizhangben"],i[class*="wodekefu"],i[class*="fuwuchuang"],i[class="iconfont qua"],i[class*="diqiu"],i[class*="huilvhuansuan"]{
+ 	color: #2eb3e8;
+ }
+ i[class*="kuaidi"],i[class*="shoukuan"]{
+ 	color: #ffb359;
+ }
+ i[class*="gupiao"],i[class*="qinmifu"],i[class*="aixinjuanzeng"],i[class*="kongxinfangzi"],i[class*="taobao"]{
+ 	color: #f96268;
+ }
+ footer a:hover{
+ 	color: #00aaee;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
