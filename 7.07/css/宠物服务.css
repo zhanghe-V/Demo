@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-07-07 10:52:18
+ * @version $Id$
+ */
+ *{
+ 	margin:0;padding: 0;
+ }
+ li{
+ 	list-style: none;
+ }
+ a{
+ 	text-decoration: none;
+ }
+ img{
+ 	display: block;
+ 	border: none;
+ }
+ html{
+ 	background: #eeeeee;
+ }
+ body{
+ 	display: flex;height: 100%;
+ 	flex-flow: column nowrap;
+ }
+ .main{
+ 	flex: 1;
+ 	overflow: auto;
+ }
+ h3{
+ 	font-weight: normal;
+ }
+ .header_top{
+ 	height: 1.14rem;
+ 	line-height: 1.14rem;
+ 	background: #fff;
+ 	padding: 0.7rem 0.2rem 0.2rem 0.2rem; 
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-content: center;
+ 	font-size: 0.3rem; 	
+ }
+ .header_top a{
+ 	color: #4f4f4f;
+ }
+ .header_top a i{
+ 	font-size: 0.5rem;
+ 	color: #999;
+ }
+ .header_bot{
+ 	width: 100%;
+ }
+ .header_bot img{
+ 	width: 100%;
+ }
+ .nav ul{
+ 	display: flex;
+ 	flex-flow: row wrap;
+ 	justify-content: space-between;
+ 	align-content: center;
+ 	padding: 0.25rem 0;
+ 	background: #fff;
+ 	margin-bottom: 0.2rem;
+ }
+ .nav ul li{
+ 	width: 23%;
+ }
+ .nav li i{
+ 	font-size: 0.85rem;
+ 	color: #D95D25FF;
+ }
+ .nav li:nth-of-type(3n) i{
+ 	color: #7F92FFFF;
+ }
+ .nav li:nth-of-type(3n+1) i{
+ 	color: #D7D527FF;
+ }
+ .nav li a{
+ 	font-size: 0.28rem;
+ 	color: #d3d3d3;
+ 	display: flex;
+ 	flex-flow: column nowrap;
+ 	text-align: center;
+ }
+ .mid_title{
+ 	font-size: 0.38rem;
+ 	color: #ffaa5f;
+ 	background: #fff;
+ 	line-height: 0.9rem;
+ 	text-indent: 0.2rem;
+ }
+
+ .buss_information{
+ 	display: flex;
+ 	flex-flow: row nowrap;
+ 	justify-content: space-between;
+ 	background: #fff; 	
+ 	box-sizing: border-box;
+ 	padding: 0.25rem;
+ }
+ .buss_information ul{
+	padding: 0 0.15rem;
+ }
+ .buss_information ul li:nth-of-type(1){
+ 	font-size: 0.3rem;
+	color: #686868;
+ }
+ .buss_information ul li:nth-of-type(2){
+ 	font-size: 0.3rem;
+ 	color: #fb9735;
+ }
+ .buss_information ul li:nth-of-type(3){
+ 	font-size: 0.26rem;
+ 	color: #868686;
+ }
+ .buss_information a i{
+	font-size: 0.4rem;
+	color: #868686;
+ }		
+ .buss_information a span{
+	font-size: 0.2rem;
+	color: #868686;
+ }
+ .buss_img{
+ 	width: 30%；
+ }
+ .buss_img img{
+ 	width: 100%;
+ }
+ footer{
+ 	background: #fff;
+ }
+ footer ul{
+ 	display: flex;
+ 	flex-flow: row nowrap;
+ 	justify-content: space-between;
+ 	font-size: 0;
+ 	padding: 0.1rem 0.2rem;
+ }
+ footer a i{
+ 	font-size: 0.7rem;
+ 	color: #9a9a9a;
+ 	display: flex;
+ 	flex-flow: column nowrap;
+ 	justify-content: flex-start;
+ }
+ footer a span{
+ 	font-size: 0.4rem;
+ 	color: #9a9a9a;
+ }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
