@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0}
+li{list-style:none}
+img{border:0;}
+a{text-decoration:none}
+html{font-size:13.33vw;height:100%}
+body{font:16px "微软雅黑";height:100%}

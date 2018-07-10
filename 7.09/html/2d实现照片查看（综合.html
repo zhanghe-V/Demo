@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css" media="screen">
+	.pic{
+		display: none;
+	}
+	a{
+		display: block;
+		float: left;
+		border-radius: 50% 50%;	
+		overflow: hidden;	
+		margin: 700px 70px;	position: relative;
+		z-index: 10;
+		border: 5px solid #fff;	
+		opacity: 0.8;
+	}
+	a:hover{
+		opacity: 1;
+	}
+	.d1{
+		display: block;
+		width: 100%;height: 100%;
+		position: fixed;
+		opacity: 0;
+		transition: all 2s;
+	}
+	#pic1{		
+		background: url("../images/a.jpg");
+		left:0;top: -100%;		
+	}
+	#pic1:target{
+		left:0;top: 0;
+		opacity: 1;
+	}
+	#pic2{		
+		background: url("../images/b.jpg");
+		left:-100%;top: 0;		
+	}
+	#pic2:target{
+		left:0;top: 0;
+		opacity: 1;
+	}
+	#pic3{		
+		background: url("../images/c.jpg");
+	}
+	#pic3:target{
+
+		transform: rotate(360deg);
+		opacity: 1;
+	}
+	#pic4{		
+		background: url("../images/d.jpg");
+		background-size: cover;
+		transform: scale(0.3,0.3);
+	}
+	#pic4:target{
+		transform: scale(1,1);
+		opacity: 1;
+	}
+	#pic5{		
+		background: url("../images/e.jpg");
+		transform: scale(1.7,1.7);
+	}
+	#pic5:target{
+		transform: scale(1,1);
+		opacity: 1;
+	}
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+    	<a href="#pic1" title=""><img src="../images/a1.jpg"></a>
+    	<div id="pic1" class="d1"></div>
+    	<a href="#pic2" title=""><img src="../images/b1.jpg"></a>
+    	<div id="pic2" class="d1"></div>
+    	<a href="#pic3" title=""><img src="../images/c1.jpg"></a>
+    	<div id="pic3" class="d1"></div>
+    	<a href="#pic4" title=""><img src="../images/d1.jpg"></a>
+    	<div id="pic4" class="d1"></div>
+    	<a href="#pic5" title=""><img src="../images/e1.jpg"></a>
+    	<div id="pic5" class="d1"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0}
+li{list-style:none}
+body{background:#CCC}
+ul{position:absolute;left:0;top:0;bottom:0;right:0;margin:auto;height:170px;z-index:10}
+li{margin:0 10px;display:inline-block;border:10px solid #fff;border-radius:50%;height:150px;}
+li a{display:inline-block;width:150px;height:150px;background-size:cover ;opacity:0.8;border-radius:50%; transition:all 1s}
+li:nth-of-type(1) a{background-image:url(../img/a1.jpg)}
+li:nth-of-type(2) a{background-image:url(../img/b1.jpg)}
+li:nth-of-type(3) a{background-image:url(../img/c1.jpg)}
+li:nth-of-type(4) a{background-image:url(../img/d1.jpg)}
+li:nth-of-type(5) a{background-image:url(../img/e1.jpg)}
+li a:hover{opacity:1}
+p img{width:100%;height:100%; transition:all 1.3s; opacity:0;position:fixed;}
+p img:nth-of-type(1){ left:0;top:-100%;}
+p img:nth-of-type(1):target{top:0; opacity:1}
+p img:nth-of-type(2){left:-100%;top:0;}
+p img:nth-of-type(2):target{left:0; opacity:1}
+p img:nth-of-type(3):target{transform:rotate(360deg); opacity:1}
+p img:nth-of-type(4){transform:scale(0.7,0.7)}
+p img:nth-of-type(4):target{transform:scale(1,1); opacity:1}
+p img:nth-of-type(5){transform:scale(1.2,1.2)}
+p img:nth-of-type(5):target{transform:scale(1,1); opacity:1}
+
+</style>
+</head>
+
+<body>
+<ul>
+   <li><a href="#img1"></a></li>
+   <li><a href="#img2"></a></li>
+   <li><a href="#img3"></a></li>
+   <li><a href="#img4"></a></li>
+   <li><a href="#img5"></a></li>
+</ul>
+<p>
+   <img src="../img/a.jpg" id="img1"> 
+   <img src="../img/b.jpg" id="img2"> 
+   <img src="../img/c.jpg" id="img3"> 
+   <img src="../img/d.jpg" id="img4"> 
+   <img src="../img/e.jpg" id="img5"> 
+</p>
+</body>
+</html>

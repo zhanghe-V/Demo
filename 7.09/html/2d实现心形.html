@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css" media="screen">
+	div div{
+		width: 100px;height: 170px;	
+		background: red;	
+		float: left;
+		border-top-left-radius: 50px 50px;
+		border-top-right-radius: 50px 50px;		
+	}
+	.container{
+		margin: 100px 100px;
+	}
+	.c1{
+		/*transform-origin: bottom right;*/
+		transform: rotate(45deg);
+		transition: all 0.5s;position: absolute;left:350px;
+	}
+	.c2{
+		/*transform-origin: bottom left;*/
+		transform: rotate(-45deg);
+		transition: all 0.5s;position: absolute;left:300px;
+	}
+	div:hover .c1{
+		transform: scale(1.5,1.5)rotate(45deg);left:375px;
+	}
+	div:hover .c2{
+		transform: scale(1.5,1.5)rotate(-45deg);
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		    <div class="c1"></div>
+    		<div class="c2"></div>
+	</div>
+
+</body>
+</html>
