@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0}
+body,html{height:100%}
+body{background:url(../img/xk.jpg); transform-style:preserve-3d}
+/*星空，旋转，相对于浏览器水平和垂直居中*/
+#starry-sky{transform:rotateX(80deg) rotateY(-10deg);width:1000px;height:1000px; position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;transform-style:preserve-3d}
+/*太阳，大小，旋转，相对于星空水平和垂直居中*/
+#sun{width:300px;height:300px; position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;animation:ball-rotate 10s linear infinite}
+/*太阳里面线条的大小*/
+#sun > div{width:300px;height:300px;border:1px solid #FF0; box-shadow:0 0 50px #FC0;}
+.star{transform-style:preserve-3d; }
+/*星球里的线条旋转不同的角度*/
+.star div{border-radius:50%; position:absolute;left:0;top:0}
+.star div:nth-of-type(1){ transform:rotateY(0)}
+.star div:nth-of-type(2){ transform:rotateY(20deg)}
+.star div:nth-of-type(3){ transform:rotateY(40deg)}
+.star div:nth-of-type(4){ transform:rotateY(60deg)}
+.star div:nth-of-type(5){ transform:rotateY(80deg)}
+.star div:nth-of-type(6){ transform:rotateY(100deg)}
+.star div:nth-of-type(7){ transform:rotateY(120deg)}
+.star div:nth-of-type(8){ transform:rotateY(140deg)}
+.star div:nth-of-type(9){ transform:rotateY(160deg)}
+.star div:nth-last-of-type(1){transform:rotateX(0deg)}
+.star div:nth-last-of-type(2){transform:rotateX(20deg)}
+.star div:nth-last-of-type(3){transform:rotateX(40deg)}
+.star div:nth-last-of-type(4){transform:rotateX(60deg)}
+.star div:nth-last-of-type(5){transform:rotateX(80deg)}
+.star div:nth-last-of-type(6){transform:rotateX(100deg)}
+.star div:nth-last-of-type(7){transform:rotateX(120deg)}
+.star div:nth-last-of-type(8){transform:rotateX(140deg)}
+.star div:nth-last-of-type(9){transform:rotateX(160deg)}
+/*轨道 大小  旋转  相对于星空进行定位*/
+.path{position:absolute;width:1000px;height:1000px;position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;animation:ball-rotate 40s linear infinite; transform-style:preserve-3d} 
+/*三条轨道的大小*/
+.path .path1{width:1000px;height:1000px;}
+.path .path2{width:700px;height:700px}
+.path .path3{width:500px;height:500px}
+.path .path1,.path .path2,.path .path3{border:3px solid #CCC; box-shadow:50px 50px 80px #ccc,-5px -5px 15px #ccc; position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;border-radius:50%}
+/*地球 大小 旋转 相对于path进行定位*/
+.earth{width:100px;height:100px;animation:ball-rotate 10s linear infinite; position:absolute;left:80%;top:80%}
+.earth > div{border:1px solid #f00;width:100px;height:100px;}
+/*所有元素的旋转动画*/
+@keyframes ball-rotate{
+	 0%{transform:rotateZ(0deg)}
+	 100%{transform:rotateZ(360deg)}
+	}
+</style>
+</head>
+<body>
+<div id="starry-sky">
+      <div id="sun" class="star">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+      </div>
+      <div class="path">
+           <div class="path1"></div>
+            <div class="path2"></div>
+           <div class="path3"></div>
+           <div class="earth star">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+           </div>
+      </div>
+</div>
+</body>
+</html>

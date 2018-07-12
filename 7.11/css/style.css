@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{font-size:13.33vw;height:100%}
+body{font:16px "微软雅黑";height:100%}
+header{background:#f6f7f8;height:0.9rem;border-bottom:1px solid #999; position:absolute;left:0;top:0;width:100%; z-index:10}
+header .jian{padding:0 0.44rem;line-height:0.9rem;font-size:0.5rem;width:0.82rem;width:1.15rem; box-sizing:border-box}
+.search{width:6.34rem}
+.search i{font-size:0.3rem; display:inline-block;text-indent:0.24rem;line-height:0.6rem;vertical-align:top}
+.search > div{width:6.08rem;height:0.6rem;border-radius:5px;background:#dddedf;margin:0.15rem 0 0.15rem 0}
+.search > div input{background:none;border:0;width:5.20rem;height:0.6rem;vertical-align:top;font-size:0.25rem}
+
+.main{background:#f5f8fa;height:100%;overflow:auto}
+.m-top{margin-top:1.11rem;margin-bottom:0.25rem}
+.main li{background:#fff;}
+.m-top li{height:1.12rem;border-bottom:1px solid #CCC;line-height:1.12rem;font-size:0.25rem;text-indent:0.2rem}
+.m-top li a{color:#999;}
+.m-bot li{margin-bottom:0.2rem}
+.m-bot .img-box img{width:2.42rem;height:2.44rem;float:left;margin-right:6px;}
+.m-bot .img-box img:nth-of-type(3){margin:0;}
+.b-tot-info{position:relative;padding:0.22rem 0}
+.m-bot .focus{background:#F63;position:absolute;right:0.4rem;top:50%;margin-top:-0.25rem;border-radius:0.08rem;text-align:center;line-height:0.5rem;}
+.m-bot .focus a{color:#fff;font-size:0.25rem;width:1.4rem;height:0.5rem; display:block}
+
+.photo-info > p{margin:0 0.2rem 0 0.28rem}
+.photo-info > section{font-size:0.28rem}
+.photo-info h2{color:#999;font-size:0.28rem}
+.photo-info span{color:#333}
+.photo-info img{width:0.95rem;height:0.95rem}

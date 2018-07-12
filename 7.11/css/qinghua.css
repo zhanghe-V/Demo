@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+header{height:800px;background:url(../img/20180710145936055155385.jpg)}
+.line{height:5px;background:linear-gradient(to right,#30F,#F00);}
+.logo{margin:60px 0 0 40px;width:180px;float:left}
+.logo img{width:100%}
+.nav{float:right;padding-top:60px;padding-right:20px}
+.nav ul>li{float:left;color:#fff;}
+.nav li>a{color:#fff}
+.top-nav{font-size:12px;opacity:0.8;line-height:30px}
+.top-nav a{padding:0 10px}
+.top-nav a:hover{color:orange}
+.big-mirror{opacity:1;font-weight:900;font-size:18px;}
+.bot-nav{font-size:14px}
+/*padding:0 25px;*/
+.bot-nav li{position:relative;box-sizing:border-box;height:45px;border-top:2px solid transparent}
+.bot-nav li>a{display:block;padding:0 15px;height:43px;line-height:43px; }
+.bot-nav li:hover{background:#fff;border-top-color:#60F}
+.bot-nav li:hover>a{color:#60C;}
+.bot-nav-subnav{width:260px;background:#fff; position:absolute;left:0;top:43px;height:0PX; overflow:hidden; box-sizing:border-box}
+.bot-nav-subnav a{display:block;line-height:35px;padding-left:20px;color:#333}
+.bot-nav-subnav a:hover{background:#ccc;}
+.bot-nav li:hover .bot-nav-subnav{height:265px;padding:10px 0;transition:all 0.3s;}
+
+
