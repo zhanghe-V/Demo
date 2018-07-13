@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-07-12 20:07:44
+ * @version $Id$
+ */
+ .wrapper{
+ 	width: 1200px;
+ 	margin: 0 auto;
+ }
+ .main_wrapper{
+ 	width: 1000px;
+ 	margin: 0 auto;
+ }
+ .nav_top{
+ 	height: 32px;
+ 	line-height: 32px;
+ 	background: #8c0000; 	
+ } 
+ .nav_top a{
+ 	color: #e5e3e3;
+ 	padding: 0 5px;
+ 	display: block;
+ }
+ .nav_top a:hover{
+ 	color: #fff;
+ }
+ .nav_top .wrapper ul li{
+ 	float: left;
+ }
+ .nav_top .ul_right .iconfont{
+ 	font-size: 12px;
+ 	color: #e5e3e3;
+ 	padding-top: 3px;
+ 	padding: 0 5px;
+ 	font-weight: 700;
+
+ }
+ .nav_logo{
+ 	width: 100%;
+ 	height: 100px;
+ 	background: #8f000b url(../images/pkucloud1h100.png) no-repeat right top;
+ }
+ .nav_logo a{
+	float: left;
+	padding:20px 0 20px 15px;
+}
+.nav_logo a img{
+	width: 213px;
+}
+.nav_bot{
+	background: #fff;
+}
+.nbot_list{
+	width: 1024px;
+	margin: 0 auto;
+}
+.nav_bot ul li{
+	float: left;
+}
+.nav_bot .nbot_list a{
+	display: block;
+	line-height: 43px;
+	font-size: 16px;
+	color: #333;
+	text-align: center;
+	width: 125px;
+}
+.nav_bot .nbot_list a:hover{
+	color: #fff;
+	background: #8f000b;
+}
+.carousel{
+	width: 100%;
+	height: 460px;
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel img:nth-of-type(1){
+	float: left;
+	position: absolute;
+	left: -1280px;
+	top: 0;
+}
+.carousel img:nth-of-type(2){
+	float: left;
+	position: absolute;
+	left: 100px;
+	top: 0;
+}
+.carousel img:nth-of-type(3){
+	float: left;
+	position: absolute;
+	left: 1480px;
+	top: 0;
+}
+/*---------------------------------*/
+.main_news>h2{
+	font-size: 18px;
+	height: 42px;
+	line-height: 42px;
+	color: #282828;
+	border-bottom: 2px solid #8c0000;
+	margin-bottom: 8px;
+}
+.main_news>h2 a{
+	color: #000;
+}
+.newL {
+    width: 308px;
+    float: left;
+    margin-right: 30px;
+    margin-top: 5px;
+    line-height: 18px;
+    height: 272px;
+    overflow: hidden;
+}
+.newR {
+    margin-left: 14px;
+    width: 317px;
+}
+.newL a img{
+	width: 308px;
+	height: 173px;
+	vertical-align: bottom;
+}
+.newL a h3{
+	font-size: 15px;
+	margin: 5px 0 5px;
+	font-family: "Microsoft Yahei", Arial;
+}
+.newL p{
+	color: #787878;
+}
+.newR li{
+	font-size: 14px;
+	padding: 12px 12px 12px 18px;
+	line-height: 20px;
+	height: 40px;
+	border-bottom: 1px solid #e5e5e5;
+	overflow: hidden;
+}
+.newR .last a:nth-of-type(1){
+	color: #8c0000;
+	display: inline-block;
+	width: 185px;
+	text-align: left;
+}
+.newR .last a:nth-of-type(2){
+	color: #8c0000;
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+	background: url(../images/a_bg.jpg)right center no-repeat;
+	padding-right: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
