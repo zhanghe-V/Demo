@@ -1,7 +1,7 @@
 //通过js改变html的font-size值，适配不同机型
 document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
 //html.style.fontSize =//获得当前浏览器宽度/7.5+px
-//如果当前设备的宽度，如果超过750px，dpr2 分辨率达到1500；就可以去访问pc端页面
+//如果当前设备的宽度，如果过750px，dpr2 分辨率达到1500；就可以去访问pc端页面
 var deviceWidth = document.documentElement.clientWidth;
 if(deviceWidth > 750){ deviceWidth = 750;}
 document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
