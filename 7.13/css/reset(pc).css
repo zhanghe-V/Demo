@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-06-27 18:44:55
+ * @version $Id$
+ */
+ body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{
+ 	margin: 0;
+ 	padding: 0;
+ }
+ a{
+ 	text-decoration: none;
+ }
+ a,a:link{
+ 	color: #323232;
+ }
+ li{
+ 	list-style: none;
+ }
+ html{
+ 	width: 100%
+ }
+ body{
+ 	font:14px "微软雅黑";
+ 	width: 100%
+ 	color:#565656;
+ 	line-height: 20px;
+ }
+ img{
+ 	border: none;
+ 	display: block;
+ }
+ h1,h2,h3,h4,h5,h6{
+ 	font-weight: normal;
+ }
+ em,b,strong,i{
+ 	font-weight: normal;
+ 	font-style: normal;
+ }
+ .clear:after{
+ 	content: "";
+ 	display: block;
+	clear: both;
+ }
+ .left{
+	float: left;
+ }
+ .right{
+	float: right;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
