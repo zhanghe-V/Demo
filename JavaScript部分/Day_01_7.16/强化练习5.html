@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="d1">+<input type="text" id="d2">=<input type="text" id="sum"> <input type="button" value="点击计算" id="btn">
+    <script>
+        document.getElementById("btn").onclick = function() {
+            var num1 = parseFloat(document.getElementById("d1").value);
+            var num2 = parseFloat(document.getElementById("d2").value);
+            var sum = num1 + num2;
+            document.getElementById("sum").value = sum;
+        }
+
+        // var request = new XMLHttpRequest();
+        // request.open("Get","get.php",true);
+        // request.send();
+        // request.onreadystatechange = function(){
+        //     request.responseText
+        // }
+    </script>
+</body>
+
+</html>

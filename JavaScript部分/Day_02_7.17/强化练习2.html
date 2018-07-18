@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var height = prompt("请输入身高:");
+        var weight = prompt("请输入体重:");
+        var normalWeight = (height - 108) * 2;
+        if (normalWeight - 10 <= weight && weight <= normalWeight + 10) {
+            alert("体重合适。");
+        } else if (weight > normalWeight) {
+            alert("体重超标！");
+        } else {
+            alert("营养不良！");
+        }
+    </script>
+</body>
+
+</html>

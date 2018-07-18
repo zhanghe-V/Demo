@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <a href="" title="" target="_blank"></a>
+    <script type="text/javascript">
+        //1.&& 与(结果是操作数)
+        //只有在第一个操作数和第二个操作数都为真的情况下，结果为真
+        //alert(2>1 && 5>3);//alert(ture&&true);   true
+        //alert(3&&5);//5
+        //alert(0&&我是中文);//0  不会执行第二个操作数
+        //alert(1 && 我是中文); //除了数字和变量，其他的字符都需要添加引号 报错了。
+
+        //alert(5&&8);//8
+        //alert('' && 100); //''  空
+        //alert(" " && 100); //100
+        //alert(null && 100); //null
+        //alert(undefined && 100);//undefined
+        //alert(isNaN(4) && 100); //false
+
+        //2.|| 或
+        //只有在两个操作数都为假的情况下，结果为假。
+        //alert(5||不考虑了);//5
+        //alert(0||'');//空
+
+        //var a=5||6;
+        //alert(a);//5
+
+        //3.! 非----结果一定是布尔值。
+        //逻辑非操作符首先会将它的操作数转换为一个布尔值，然后再对其求反
+        //alert(!5);//false;
+        //alert(!!!5);//false;
+        //alert(!!5);//true;
+    </script>
+</body>
+
+</html>
