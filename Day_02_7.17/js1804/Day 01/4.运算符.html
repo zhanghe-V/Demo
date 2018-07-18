@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //1.赋值运算符 = 将等式右边的结果赋值给左边
+        //var a=10;//将10赋值给变量a
+        //复合赋值操作 +=、-=、*=、/=、%= 带操作的复合赋值运算。（更快捷，更优）
+        //a=a+5; //a+=5;
+        //b*=15==>b=b*15
+
+        //2.+  -  *  /  %(求模、取余数)
+        //+：加法符号、连接符(和字符串有关)。
+        //只要存在字符串，+变成连接符号
+        //var s='hello';
+        //var w='world';
+        //alert(s+w);//helloworld
+        //alert('5'+5);//55
+
+        //%(求模、取余数)
+        //alert(9%2);//1
+        //alert(2%9);//2  前面的数字小于后面的数字，取前面数字的值。
+
+        //alert(0.1+0.2);//0.30000000000000004
+        //alert(0.2+0.4);//0.6000000000000001
+        //alert(0.1+0.4);//0.5
+
+        //3.关系运算符（结果为布尔值） <、>、<=、>=、==、===、!=(不相等)  !==（不全等）
+        //alert(3>=2);//true
+        //=赋值符号
+        //==比较值是否相等，具有隐式转换(数字为底层)
+        //===恒等(数据类型和值都要相等)
+        //alert('5'==5);//true
+        //alert('5'===5);//false:类型不相等
+
+        //核心的内容:==
+        //1.js约定：null和undefined是相等的,不全等。
+        //2.null或者undefined和自己比较是相等的，也是恒等的。
+        //3.null和除了自己之外的任何类型的数据(除了undefined)都不相等。undefined一样的。
+        //alert(undefined=='null');
+        //alert(false==0);//true  false转成数字0
+        //alert(''==0);
+        //alert(' '==0);
+        //alert(true==2);//1!=2  false;
+        //alert(true==1);//true
+        //alert(undefined==1);//false
+        //alert(undefined==0);//false
+        //alert(undefined==true);//false
+        //alert(undefined==false);//false
+        //alert(undefined=='');//false
+        //alert(undefined==' ');//false
+
+        //Number( ) /String( )/Boolean( )：静态方法，方法名首字母会大写。
+        //Number():将括号里面的值转换成数字，如果不能转换的输出NaN(not a number:不是一个数字)；
+        //alert(Number(false));//0
+        //alert(Number(true));//1
+        //alert(Number(''));//0
+        //alert(Number(' ')); //空格   0
+        //alert(Number('hello')); //NaN
+        //alert(typeof String(100));//string
+        //alert(String(true)); //true
+        //alert(typeof(String(true)));//string
+        //alert(String(78));
+        //alert(typeof String(78)); //string
+        //alert(typeof Boolean(isNaN(5)));//boolean
+
+        //Boolean:非空即真，非零即真， null和undefined都是false.
+        //alert(Boolean(''));//false
+        //alert(Boolean(' '));//true
+        //alert(Boolean(0));//false;
+        //alert(Boolean('0'));//true;
+        //alert(Boolean(undefined));//false
+        //alert(Boolean(null)); //false
+        alert(Number(Boolean('null'))); //1
+    </script>
+</body>
+
+</html>

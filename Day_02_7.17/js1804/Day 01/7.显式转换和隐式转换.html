@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body style="background: #3478ef;">
+    <script type="text/javascript">
+        //一、显式转换、强制转换：系统强制转换或者手动转换
+        //1.Number():NaN--Not a Number
+        /* var num1 = Number(prompt('请输入一个数字'));
+        var num2 = Number(prompt('请输入一个数字'));
+        alert(typeof num1); //'number'
+        alert(typeof num1 === 'number'); //true
+        alert(num1 + num2); */
+
+        //2.String():任何类型转换成字符串。
+
+        //3.Boolean():非空即真，非0即真。  undefined null  false
+        //alert(Boolean(NaN));//false
+        //alert(Boolean(Number('abc'))); //false
+
+
+        //强制转换
+        //4.parseInt(a,b) ： 将括号的内容转换成对应的整数。  a:转换的字符串      b:进制
+        /*alert(parseInt(123.55));//123
+        alert(parseInt('123.55'));//123  数字字符串也能输出整数  integer
+        alert(parseInt('123.55abc'));//123  从头开始截取字符串的数字，碰到非数字停止截取。
+        alert(parseInt('120px'));//120*/
+
+        //数字的进制问题：二进制(0,1)   八进制(0-7)    十进制(0-9)       十六进制(0-9 a-f)
+
+        //alert(parseInt('11',2));//3    2代表二进制
+        //alert(parseInt('17',8));//15
+        //alert(parseInt('14',16));//20
+        //alert(parseInt('11', 20));//将前面几进制的数强制转化为十进制的整数
+
+        //5.toString():进制转换成对应的字符串
+        /* var num = 14;
+        alert(num.toString(16)); //e
+        alert(num.toString(2)); //1110
+        alert(num.toString(8)); //16
+        alert(num.toString(10)); //14 */
+
+        //6.parseFloat() ： 将括号的内容转换成对应的浮点数(小数)
+        //小数没有进制
+        //alert(parseFloat('123.45abc'));//123.45
+        //alert(parseFloat('abc123.45abc'));//NaN
+        //alert(parseInt('abc123abc'));//NaN
+
+        //alert(0.1+0.2);//0.30000000000004
+
+        //扩大倍数
+        //alert(parseInt((0.1+0.2)*10)/10);
+
+        //alert(parseFloat(0.1+0.2));//0.30000000000004
+
+        //7.toFixed(number); number:小数的位数    数字对象下面的
+        //alert((0.1+0.2).toFixed(1));//0.3
+
+
+
+        //二、隐式转换：系统自动根据当前的符号进行转换
+        //常见的隐式转换的符号： == ！ + - * / % ++ --
+
+        // var str = '10';
+        // var str2 = 'hello';
+        // alert(typeof str); //string
+        // alert(typeof + str); //number
+        // alert(typeof ++str); //number
+
+        // alert(typeof str2); //string
+        // alert(typeof + str2); //number
+        // alert(typeof ++str2); //number
+
+        //alert(typeof NaN);//number
+        //alert(typeof +str2);//number
+
+        /*alert('3'+'5');//35
+        alert('3'-'5');//-2
+        alert('3'*'5');//15
+        alert('3'/'5');//0.6
+        alert('3'%'5');//3*/
+
+        //alert(!5);//false
+
+
+        //var num=023;//八进制
+        //var num=0xffffff;//十六进制6位最大的数字   ==>  十六进制颜色
+
+
+        //根据当前的十六进制值判断当前的颜色
+        //rgb=red green blue(红绿蓝)
+        //#000000黑   #ffffff白     颜色值越来越淡，每二位查看的最大值就是当前颜色的值。
+        //十六进制：0-9 a-f 六位组成    a:10   f:15
+    </script>
+</body>
+
+</html>

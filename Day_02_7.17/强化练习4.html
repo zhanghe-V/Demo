@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var mark = prompt("请输入分数");
+        /*
+        //if解法
+        if (100 == mark) {
+            alert("满分!");
+        } else if (mark >= 90 && mark < 100) {
+            alert("优秀!");
+        } else if (mark >= 80 && mark < 90) {
+            alert("良好!");
+        } else if (mark >= 70 && mark < 80) {
+            alert("中等!");
+        } else if (mark >= 60 && mark < 70) {
+            alert("及格!");
+        } else if (mark >= 0 && mark < 60) {
+            alert("考的什么玩意!");
+        }*/
+        //case多分支解法
+        switch (true) {
+            case (mark > 90 && mark <= 100):
+                document.write('优秀' + "<br/>");
+                break;
+            case (mark > 80 && mark <= 90):
+                document.write("良好" + "<br/>");
+                break;
+            case (mark > 70 && mark <= 80):
+                document.write("中等" + "<br/>");
+                break;
+            case (mark > 60 && mark <= 70):
+                document.write("及格" + "<br/>");
+                break;
+            default:
+                document.write("考的什么玩意" + "<br/>");
+                break;
+        };
+    </script>
+</body>
+
+</html>
