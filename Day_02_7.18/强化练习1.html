@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.入职薪水10K，每年涨幅5%，50年后薪水是多少？
+        var num = 10
+        for (i = 1; i <= 50; i++) {
+            num += 0.05 * num;
+        }
+        alert(num.toFixed(1) + 'K');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //打印出1000-2000年中所有的闰年，并以每行四个数的形式输出
+        for (var year = 1000, flag = 0; year <= 2000; year++) {
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                document.write(year + " ");
+                flag++;
+                if (flag == 4) {
+                    document.write('<br/>');
+                    flag = 0;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

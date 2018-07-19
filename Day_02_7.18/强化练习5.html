@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //5.利用星型字符（*）输出如下图形：三角形和梯形
+        /* for (i = 0; i <= 5; i++) {
+            for (j = 0; j < i; j++) {
+                document.write("*");
+            }
+            document.write('<br/>');
+        } */
+
+
+        /* for (var i = 1; i <= 5; i++) {
+            for (var j = 5 - i; j >= 0; j--) {//     
+
+                document.write('&nbsp');
+            }
+            for (var k = 1; k <= 2 * i - 1; k++) {
+                document.write('*');
+            }
+            document.write('<br/>');
+        } */
+        //      *
+        //     ***
+        //    *****
+        //   *******
+        //  *********
+
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 5 - i; j >= 0; j--) { //     
+
+                document.write('&nbsp');
+            }
+            for (var k = 1; k <= 2 * i; k++) {
+                document.write('*');
+            }
+            document.write('<br/>');
+        }
+        //      **
+        //     ****
+        //    ******
+        //   ********
+        //  **********
+    </script>
+</body>
+
+</html>

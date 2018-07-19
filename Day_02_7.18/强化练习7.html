@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //7.求100-999之间的水仙花数。
+        for (var i = 100; i <= 999; i++) {
+            gw = parseInt(i % 10);
+            sw = parseInt(i % 100 / 10);
+            bw = parseInt(i / 100);
+
+            if (Math.pow(gw, 3) + Math.pow(sw, 3) + Math.pow(bw, 3) == i) {
+                document.write(i + " ");
+            }
+        }
+    </script>
+</body>
+
+</html>

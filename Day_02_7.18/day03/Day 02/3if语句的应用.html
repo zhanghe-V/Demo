@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//1、if( 条件 ){ 语句1 }--单分支
+		
+		//案例：输入年份，计算某一年是否是闰年（闰年能被4整除且不能被100整除，或能被400整除）；
+		/*var year=prompt('请输入一个四位的年份：');
+		if( year%4==0 && year%100!=0 || year%400==0 ){
+			alert('闰年');
+		}*/
+		
+		//2、if ( 条件 ) { 语句1 } else { 语句2 }---最多的情况
+		//可能的情况放在if语句里面，不需要执行else语句。
+		/*var year=Number(prompt('请输入一个四位的年份：'));
+		if(!isNaN(year)){//是数字
+			
+			if(year>=1000 && year<=9999){
+				
+				if( year%4==0 && year%100!=0 || year%400==0 ){
+					alert('闰年');
+				}else{
+					alert('不是闰年');
+				}
+				
+				
+			}else{
+				alert('你输入的数字不是一个合法的年份');
+			}
+			
+		}else{//不是数字
+			alert('请输入数字');
+		}*/
+		
+		/*var year=Number(prompt('请输入一个四位的年份：'));
+		if(!isNaN(year) && year>=1000 && year<=9999){//是数字
+			if( year%4==0 && year%100!=0 || year%400==0 ){
+				alert('闰年');
+			}else{
+				alert('不是闰年');
+			}
+		}else{//不是数字
+			alert('请输入数字或者数字过大');
+		}*/
+		
+		//3、if ( 条件 ) { 语句1 } else if ( 条件 ){ 语句2 }...else{ 语句 }
+		//开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适(身高：cm)
+		//偏胖、偏瘦、正常
+		
+		var height=prompt('请输入你的身高(cm):');
+		var weight=prompt('请输入你的体重(斤):');
+		
+		var maxweight=(height-108)*2+10;//大于maxweight,偏胖
+		var minweight=(height-108)*2-10;//小于minweight,偏瘦
+		
+		if(weight>maxweight){
+			alert('偏胖的，要减肥了');
+		}else if(weight<=maxweight && weight>=minweight){
+			alert('标准身材，可以迎娶白富美');
+		}else if(weight<minweight){
+			alert('偏瘦，多吃点');
+		}else{//除了上面三种情况之外的其它情况。
+			alert('测试有误！');
+		}
+		
+		
+		</script>
+	</body>
+</html>

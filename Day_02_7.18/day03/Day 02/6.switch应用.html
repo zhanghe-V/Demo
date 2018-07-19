@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//简单对比三种分支语句:if语句     三目运算符      switch语句
+			//三目运算符：适合简单的条件以及值是具体的。
+			//if语句适合范围  以及双分支和嵌套。
+			//switch适合多分支，通过恒等的关系获取对应的分支下面的语句,而非范围。
+			
+			//4．案例：输入分数，判定成绩等级(if和switch两种写法)（5个等级0-100）
+			var score=prompt('请输入一个分数0-100:');//85
+			switch(true){//恒等关系
+				case score>90 && score<=100:   alert('优秀');  break;
+				case score>80 && score<=90:   alert('还不错');  break;
+				case score>70 && score<=80:   alert('一般');  break;
+				case score>=60 && score<=70:   alert('加油');  break;
+				case score>=0 && score<60:   alert('忏悔');  break;
+				default:alert('输入有误');
+			}
+			
+			
+		</script>
+	</body>
+</html>

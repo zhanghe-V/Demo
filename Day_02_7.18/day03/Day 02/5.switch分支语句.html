@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//程序的多分支结构 switch语句\break语句
+		//switch 语句与 if 语句的关系最为密切，而且也是在其他语言中普遍使用的一种流程控制语句。
+		
+		//1.switch适合多分支。
+		//switch基本控制结构
+		
+		/*switch(value){
+			case 值1: 语句块1;  break;
+			case 值2: 语句块2;  break;
+			case 值3: 语句块3;  break;
+			case 值4: 语句块4;  break;
+			case 值5: 语句块5;  break;
+			......
+			default:语句块;
+		}
+		利用switch括号里面的value和case后面的值进行比较，恒等的比较(值和类型都相等)，如果值相等，执行此case后面的语句块。
+		berak:终止switch语句(case具有穿透力)，没有break，代码继续往下执行。
+	 	default:等同于else语句，代表其他的情况，和else一样也可以省略不写。
+		*/
+		
+		//输入数字显示星期
+		//0-6   星期天--星期六   
+		
+		/*var week=prompt('请输入数字0-6：');//string
+		switch(Number(week)){
+			case 0: alert('星期日'); break;
+			case 1: alert('星期一'); break;
+			case 2: alert('星期二'); break;
+			case 3: alert('星期三'); break;
+			case 4: alert('星期四'); break;
+			case 5: alert('星期五'); break;
+			case 6: alert('星期六'); break;
+			default: alert('输入有误!');
+		}*/
+		
+		//注意case向下的穿透力，switch语句case穿透力影响输出。
+		
+		//应用case穿透力
+		//输入月份，显示当月的天数
+		//大月：1,3,5,7,8,10,12--31天
+		//小月：4,6,9,11--30天
+		//平月：2--闰年：29   非闰年：28
+		
+		var year=prompt('请输入四位年份：');
+		var month=prompt('请输入月份1-12:');
+		
+		switch(Number(month)){
+			case 1: 
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12: alert('大月：31天'); break;//case向下的穿透力
+			case 4:
+			case 6:
+			case 9:
+			case 11: alert('小月：30天');break;//case向下的穿透力
+			case 2:  if(year%4==0 && year%100!=0 || year%400==0){
+						alert('平月：29天');
+					 }else{
+						alert('平月：28天');
+					 }
+			break;
+			default:alert('输入有误');
+		}
+		
+		
+		</script>
+	</body>
+</html>
