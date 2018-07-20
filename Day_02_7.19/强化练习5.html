@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table td {
+            border: 1px solid #ee55f7;
+            padding: 10px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //5.函数和循环结合打印九九乘法表
+        function creatTable(rows) {
+            document.write("<table>")
+            for (i = 1; i <= rows; i++) {
+                document.write("<tr>")
+                for (j = 1; j <= i; j++) {
+                    document.write("<td>" + i + "X" + j + "=" + i * j + "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+        var rows = Number(prompt("请输入行列数:"));
+        creatTable(rows);
+    </script>
+</body>
+
+</html>

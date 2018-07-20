@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input[type="text"] {
+            width: 100px;
+            height: 20px;
+            font-size: 16px;
+            background: #9e9e9e;
+            color: #000000;
+        }
+        
+        input[type="button"] {
+            width: 65px;
+            height: 30px;
+            font-size: 14px;
+            background: #80ffff;
+            color: #606060;
+        }
+        
+        input {
+            border: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="num1">
+    <select id="sec">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="multiple">x</option>
+        <option value="devide">÷</option>
+    </select>
+    <input type="text" name="" id="num2">=
+    <input type="text" name="" id="result">
+    <input type="button" value="计算结果" id="btn">
+    <script>
+        // 1.编写一个函数，计算两个数字的和、差、积、商（要求：使用传参的形式）
+        var btn = document.getElementById("btn");
+        var result = document.getElementById("result");
+
+        btn.onclick = function() {
+            var fuhao = document.getElementById("sec").value; //此句不能放函数外面 如果放外面，网页一刷新 fuhao就会被赋值为add并且不会再变化
+            //而我们需要在每一次点击事件都获取到当前的符号值
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            var a = calculate(num1, num2, fuhao);
+            result.value = a;
+        }
+
+        //计算函数
+        function calculate(a, b, mark) {
+            if (mark == "add") {
+                return a + b;
+            } else if (mark == "sub") {
+                return a - b;
+            } else if (mark == "multiple") {
+                return a * b;
+            } else if (mark == "devide") {
+                return a / b;
+            }
+        }
+    </script>
+</body>
+
+</html>

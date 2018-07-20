@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sort(a, b, c) {
+            var max = Math.max(a, b, c);
+            var min = Math.min(a, b, c);
+            if (a >= min && a << max) {
+                var middle = a;
+            } else if (b >= min && b <= max) {
+                var middle = b;
+            } else if (c >= min && c <= max) {
+                var middle = c;
+            }
+            var result = max + " " + middle + " " + min;
+            return result;
+        }
+        document.write(sort(345, 43521, 332));
+    </script>
+</body>
+
+</html>
