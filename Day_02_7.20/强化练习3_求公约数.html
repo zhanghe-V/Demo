@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function gys(m, n) {
+            var r = m % n; //辗转相除法
+            m = n;
+            n = r;
+            if (r == 0) {
+                return m;
+            } else {
+                return gys(m, n);
+            }
+        }
+        document.write(gys(24, 12));
+    </script>
+</body>
+
+</html>
