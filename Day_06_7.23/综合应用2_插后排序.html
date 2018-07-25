@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //2.有一个从小到大排好序的数组。现输入一个数，要求按原来的规律将它插入数组中。
+        // function sortAfterInsert(arr, num) {
+        //     var newArray = arr.concat(num);
+        //     newArray.sort(function(a, b) {//追加末尾直接排简单粗暴
+        //         return a - b
+        //     });
+        //     return newArray;
+        // }
+        // var arrMyArray = [19, 93, 09, 03, 19, 95, 10, 12];
+        // document.write(sortAfterInsert(arrMyArray, 52.1));
+
+        //弯弯绕绕法
+        function sortAfterInsert(arr, num) {
+            var newArraay = arr.concat();
+            newArraay.sort(function(a, b) { //先排个序
+                return a - b
+            });
+
+            if (num <= newArraay[0]) { //插入数与数组第一项比较，若小于，从前面插
+                newArraay.unshift(num);
+            } else if (num >= newArraay[newArraay.length - 1]) {
+                newArraay.push(num); //插入数与数组末项比较，若大于，从后面插
+            } else { //介于两者之间，判断插入位置
+                for (i = 0; i < newArraay.length - 1; i++) {
+                    if (num >= newArraay[i] && num <= newArraay[i + 1]) {
+                        newArraay.splice(i, 0, num);
+                        break;
+                    }
+                }
+            }
+            return newArraay;
+        }
+    </script>
+</body>
+
+</html>

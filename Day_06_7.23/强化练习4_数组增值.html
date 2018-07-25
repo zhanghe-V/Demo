@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //4．编写函数map(arr) 把数组中的每一位数字都增加30%
+        function map(arr) {
+            var newArray = arr.concat();
+            for (i = 0; i <= newArray.length - 1; i++) {
+                newArray[i] += 0.3 * newArray[i];
+            }
+            return newArray;
+        }
+        var arr = [96, 12, 3, 6, 96, 845, 752, 741, 12, 3, 5639];
+        document.write(map(arr));
+    </script>
+</body>
+
+</html>

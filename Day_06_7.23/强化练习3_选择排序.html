@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*---------------选择排序----------------*/
+        //固定数组
+        // var arr = [96, 12, 3, 6, 96, 845, 752, 741, 12, 3, 5639];
+        // var newArray = arr.concat();
+        // for (i = 0; i < newArray.length - 1; i++) {
+        //     for (j = i + 1; j <= newArray.length - 1; j++) {
+        //         if (newArray[i] > newArray[j]) { //由小到大
+        //             temp = newArray[i];
+        //             newArray[i] = newArray[j];
+        //             newArray[j] = temp;
+        //         }
+        //     }
+        // }
+        // document.write(newArray);
+
+
+        /*---------------选择排序封装函数----------------*/
+        function selectSort(arr) {
+            var newArray = arr.concat();
+            for (i = 0; i < newArray.length - 1; i++) {
+                for (j = i + 1; j <= newArray.length - 1; j++) {
+                    if (newArray[i] > newArray[j]) {
+                        temp = newArray[i];
+                        newArray[i] = newArray[j];
+                        newArray[j] = temp;
+                    }
+                }
+            }
+            return newArray;
+        }
+
+        var arr = [96, 12, 3, 6, 96, 845, 752, 741, 12, 3, 5639];
+        document.write(selectSort(arr));
+    </script>
+</body>
+
+</html>

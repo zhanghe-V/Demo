@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function randomFiveNumber() {
+            var arr = [];
+            for (i = 0; i < 5; i++) {
+                var rendomNumber = parseInt(Math.random() * 10);
+                arr.push(rendomNumber);
+            }
+            for (i = 0; i < 5; i++) {
+                if (arr[0] == 0) {
+                    arr.shift();
+                } else
+                    break;
+            }
+            console.log("生成随机数:" + arr.join(""));
+            console.log("该数共有" + arr.length + "位");
+            for (i = 0; i < arr.length; i++) {
+                console.log("第" + (i + 1) + "位:" + arr[i]);
+            }
+        }
+        randomFiveNumber();
+    </script>
+</body>
+
+</html>

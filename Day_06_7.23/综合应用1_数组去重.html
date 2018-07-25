@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.编写函数norepeat(arr) 将数组的重复元素去掉，并返回新的数组。
+        function norepeat(arr) {
+            for (i = 0; i < arr.len - 1; i++) {
+                for (j = i + i; j <= arr.len - 1; j++) {
+                    if (arr[i] == arr[j]) {
+                        arr.splice(j, 1);
+                    }
+                }
+            }
+            return arr;
+        }
+        var arr = [96, 12, 3, 6, 96, 845, 752, 741, 12, 3, 5639];
+        document.write(norepeat(arr));
+    </script>
+</body>
+
+</html>

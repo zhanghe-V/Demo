@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //6．随机点名程序
+        function randomName(arr) {
+            var len = arr.length;
+            var randomNumber = Math.floor(Math.random() * len);
+            return arr[randomNumber];
+        }
+        var arr = ['张贺', '胡yi晨', "sofei", "mikle", "jack", "郑玉峰"];
+        document.write(randomName(arr));
+    </script>
+</body>
+
+</html>

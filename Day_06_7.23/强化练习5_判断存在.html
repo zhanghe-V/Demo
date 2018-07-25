@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //5．编写函数has(arr , 60) 判断数组中是否存在60这个元素，返回布尔类型
+        function has(arr, findNumber) {
+            var flag = 0;
+            for (i = 0; i <= arr.length - 1; i++) {
+                if (arr[i] == findNumber) {
+                    flag++;
+                }
+            }
+            if (flag > 0) return true;
+            else return false;
+        }
+        var arr = [96, 12, 3, 6, 96, 845, 752, 741, 12, 3, 5639];
+        document.write(has(arr, 60));
+    </script>
+</body>
+
+</html>
