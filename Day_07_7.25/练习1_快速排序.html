@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [96, 12, 3, 6, 96, 845, 752, 741, 12, 3, 5639];
+
+        // function quicksort(arr) {
+        //     if (arr.length <= 1) {
+        //         return arr;
+        //     } else {
+        //         var middleIndx = parseInt(arr.length / 2);
+        //         var middleValue = arr.splice(middleIndx, 1)[0];
+        //         var left = [];
+        //         var right = [];
+        //         for (i = 0; i < arr.length; i++) {
+        //             if (arr[i] < middleValue) {
+        //                 left.push(arr[i]);
+        //             } else {
+        //                 right.push(arr[i]);
+        //             }
+        //         }
+        //         return quicksort(left).concat(middleValue, quicksort(right));
+        //     }
+        // }
+
+        //快速排序
+        function quicksort(arr) {
+            if (arr.length <= 1) {
+                return arr;
+            } else {
+                midIndex = parseInt(arr.length / 2);
+                midValue = arr.splice(midIndex, 1)[0];
+                var left = [];
+                var right = [];
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i] > midValue) {
+                        right.push(arr[i]);
+                    } else {
+                        left.push(arr[i]);
+                    }
+                }
+                return quicksort(left).concat(midValue, quicksort(right));
+            }
+        }
+
+        //利用快速排序法去重
+        // function quicksort(arr) {
+        //     if (arr.length <= 1) {
+        //         return arr;
+        //     } else {
+        //         var midindex = parseInt(arr.length / 2); //获取中间索引
+        //         var midvalue = arr.splice(midindex, 1)[0]; //获取中间值
+        //         var left = [];
+        //         var right = [];
+        //         for (var i = 0; i < arr.length; i++) {
+        //             if (arr[i] < midvalue) {
+        //                 left.push(arr[i]);
+        //             } else if (arr[i] > midvalue) {
+        //                 right.push(arr[i]);
+        //             }
+        //         }
+        //         return quicksort(left).concat(midvalue, quicksort(right));
+        //     }
+        // }
+
+        console.log(quicksort(arr));
+    </script>
+</body>
+
+</html>
