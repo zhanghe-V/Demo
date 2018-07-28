@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="">
+    <input type="button" value="cds5" id="btn">
+    <script>
+        //1．数字字母混合验证码(数字+大写字母+小写字母)
+        var oBtn = document.getElementById("btn");
+        var arr = [];
+        for (i = 48; i <= 57; i++) {
+            arr.push(String.fromCharCode(i));
+        }
+        for (j = 97; j <= 122; j++) {
+            arr.push(String.fromCharCode(j));
+        }
+
+        function getyzm() {
+            var yzm = "";
+            for (m = 0; m < 4; m++) {
+                var randomIndex = Math.floor(Math.random() * arr.length);
+                if (randomIndex < 10) {
+                    yzm += arr[randomIndex];
+                } else {
+                    if (Math.random() > 0.5) {
+                        yzm += arr[randomIndex].toUpperCase();
+                    } else {
+                        yzm += arr[randomIndex];
+                    }
+                }
+            }
+            oBtn.value = yzm;
+        }
+
+        oBtn.onclick = getyzm;
+
+        /* var obtn = document.getElementById("btn");
+        var arr = [];
+        for (var i = 48; i <= 57; i++) {
+            arr.push(String.fromCharCode(i));
+        }
+        for (var j = 97; j <= 122; j++) {
+            arr.push(String.fromCharCode(j));
+        }
+        console.log(arr);
+
+        function getyzm() {
+            var yzm = "";
+            for (i = 0; i < 4; i++) {
+                var randIndex = Math.round(Math.random() * arr.length)
+                if (randIndex < 10) {
+                    yzm += arr[randIndex];
+                } else {
+                    if (Math.random() > 0.5) {
+                        yzm += arr[randIndex].toUpperCase();
+                    } else {
+                        yzm += arr[randIndex];
+                    }
+                }
+            }
+            obtn.value = yzm;
+        }
+        obtn.onclick = getyzm; */
+    </script>
+</body>
+
+</html>

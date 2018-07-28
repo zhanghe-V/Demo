@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  2 . 已知字符串“aabbbccdeefffgghhhiiiiijjjjjjjjj”编程实现以下功能。
+        // 统计每个字符出现的次数，显示结果;
+        // 去掉重复的字符，使结果显示 abcdfgj; 
+        var str = 'aabbbccdeefffgghhhiiiiijjjjjjjjj';
+        var arr = str.split("");
+        var newArray = "";
+        var result = arr.reduce(function(prev, value, index, arr) {
+            prev[value] = prev[value] + 1 || 1;
+            return prev;
+        }, {});
+        console.log(result);
+        for (var i in result) {
+            newArray += i;
+        }
+        console.log(newArray);
+    </script>
+</body>
+
+</html>
