@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            display: block;
+        }
+        
+        span {
+            font-size: 16px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #ffffff;
+            background: #bfbfbf;
+            cursor: pointer;
+        }
+        
+        p {
+            position: absolute;
+            top: 10px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="adv">
+        <img src="p (1).jpg" alt="" id="oImg">
+        <span id="oClose">X</span>
+        <p>距离广告关闭还剩<strong id="oSeconds">5</strong>秒</p>
+    </div>
+
+    <script>
+        var adv = document.getElementById("adv");
+        var close = document.getElementById("oClose");
+        var seconds = document.getElementById("oSeconds");
+        var timer = setInterval(function() {
+            var num = parseInt(seconds.innerHTML);
+            num--;
+            seconds.innerHTML = num;
+            if (num == 0) {
+                adv.style.display = "none";
+                clearInterval(timer);
+            }
+        }, 1000);
+        close.onclick = function() {
+            adv.style.display = "none";
+            clearInterval(timer);
+        }
+    </script>
+</body>
+
+</html>

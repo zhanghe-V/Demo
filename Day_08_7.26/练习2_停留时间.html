@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 16px;
+            color: #272727;
+        }
+        
+        span {
+            font-size: 18px;
+            color: #f00000;
+        }
+    </style>
+</head>
+
+<body>
+    <p>当前停留时间为<span id="hour">0</span>时<span id="min">0</span>分 <span id="sec">0</span>秒</p>
+    <script>
+        var sec = document.getElementById("sec");
+        var min = document.getElementById("min");
+        var hour = document.getElementById("hour");
+
+        var timer = setInterval(function() {
+            var secnum = parseInt(sec.innerHTML);
+            var minmun = parseInt(min.innerHTML);
+            var hourmun = parseInt(hour.innerHTML);
+            secnum++;
+            sec.innerHTML = secnum;
+            if (secnum > 59) {
+                secnum = 0;
+                minmun++;
+                sec.innerHTML = secnum;
+                min.innerHTML = minmun;
+            }
+            if (minnum > 59) {
+                minmun = 0;
+                hourmun++;
+                min.innerHTML = minmun;
+                hour.innerHTML = hourmun;
+            }
+
+        }, 1000);
+    </script>
+</body>
+
+</html>
