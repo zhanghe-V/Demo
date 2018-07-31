@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .nav {
+            overflow: hidden;
+        }
+        
+        a {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            float: left;
+            padding: 5px 15px;
+            text-decoration: none;
+            color: #0b0b0b;
+            border: 1px solid red;
+            border-left: none;
+        }
+        
+        .content {
+            height: 110px;
+            width: 314px;
+            border: 1px solid red;
+            border-top: none;
+        }
+        
+        .click {
+            background: red;
+        }
+        
+        ul {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="nav">
+        <a href="#" x=0>公告</a>
+        <a href="#" x=1>规则</a>
+        <a href="#" x=2>安全</a>
+        <a href="#" x=3>论坛</a>
+        <a href="#" x=4>公益</a>
+    </div> -->
+    <div class="nav">
+        <a href="#">公告</a>
+        <a href="#">规则</a>
+        <a href="#">安全</a>
+        <a href="#">论坛</a>
+        <a href="#">公益</a>
+    </div>
+    <div class="content">
+        <ul>
+            <li>1新增《淘宝网抽检标准</li>
+            <li>1新增《淘宝网抽检标准</li>
+            <li>1新增《淘宝网抽检标准</li>
+            <li>1新增《淘宝网抽检标准</li>
+            <li>1新增《淘宝网抽检标准</li>
+        </ul>
+        <ul>
+            <li>2新增《淘宝网抽检标准</li>
+            <li>2新增《淘宝网抽检标准</li>
+            <li>2新增《淘宝网抽检标准</li>
+            <li>2新增《淘宝网抽检标准</li>
+            <li>2新增《淘宝网抽检标准</li>
+        </ul>
+        <ul>
+            <li>3新增《淘宝网抽检标准</li>
+            <li>3新增《淘宝网抽检标准</li>
+            <li>3新增《淘宝网抽检标准</li>
+            <li>3新增《淘宝网抽检标准</li>
+            <li>3新增《淘宝网抽检标准</li>
+        </ul>
+        <ul>
+            <li>4新增《淘宝网抽检标准</li>
+            <li>4新增《淘宝网抽检标准</li>
+            <li>4新增《淘宝网抽检标准</li>
+            <li>4新增《淘宝网抽检标准</li>
+            <li>4新增《淘宝网抽检标准</li>
+        </ul>
+        <ul>
+            <li>5新增《淘宝网抽检标准</li>
+            <li>5新增《淘宝网抽检标准</li>
+            <li>5新增《淘宝网抽检标准</li>
+            <li>5新增《淘宝网抽检标准</li>
+            <li>5新增《淘宝网抽检标准</li>
+        </ul>
+    </div>
+
+    <script>
+        // var nav = document.getElementsByClassName("nav");
+        // var aA = nav[0].querySelectorAll("a");
+        // var content = document.getElementsByClassName("content");
+        // var aUl = content[0].querySelectorAll("ul");
+        // for (var i = 0; i < aA.length; i++) {
+        //     aA[i].onmouseover = function() {
+        //         for (var j = 0; j < aA.length; j++) {
+        //             aA[j].className = "";
+        //             aUl[j].style.display = "none";
+        //         }
+        //         this.className = "click";
+        //         aUl[this.getAttribute("x")].style.display = "block";
+        //     }
+        // }
+
+
+        var aA = document.querySelectorAll(".nav a"); //选择取到所有导航
+        var aUl = document.querySelectorAll(".content ul"); //取到所有的显示内容
+        for (var i = 0; i < aA.length; i++) {
+            aA[i].x = i; //给导航赋值自定义属性
+            aA[i].onclick = function() { //点击事件
+                for (var j = 0; j < aA.length; j++) {
+                    aA[j].className = "";
+                    aUl[j].style.display = "none";
+                }
+                this.className = "click";
+                aUl[this.x].style.display = "block"; //通过自定义属性的x值控制内容的显示
+            }
+        }
+
+        // var aA = document.querySelectorAll(".nav a");
+        // var aUl = document.querySelectorAll(".content ul");
+        // for (var i = 0; i < aA.length; i++) {
+        //     aA[i].x = i;
+        //     aA[i].onclick = function() {
+        //         for (var j = 0; j < aA.length; j++) {
+        //             aA[j].className = "";
+        //             aUl[j].style.display = "none";
+        //         }
+        //         this.className = "click";
+        //         aUl[this.x].style.display = "block";
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

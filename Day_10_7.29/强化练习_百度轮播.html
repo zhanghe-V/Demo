@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .nav {
+            width: 560px;
+            height: 305px;
+            border: 1px solid lightblue;
+            margin: 80px auto 0;
+            position: relative;
+        }
+        
+        .nav ul li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        
+        .nav ul img {
+            width: 560px;
+            height: 305px;
+            display: block;
+        }
+        
+        .nav ol {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+        
+        ol li {
+            width: 10px;
+            height: 10px;
+            float: left;
+            background: limegreen;
+            margin-right: 5px;
+            text-indent: -99999px;
+            border-radius: 50%;
+        }
+        
+        ol li.active {
+            background: lightpink;
+        }
+        
+        .left,
+        .right {
+            position: absolute;
+            color: aliceblue;
+            font-size: 60px;
+            top: 50%;
+            margin-top: -30px;
+            display: block;
+            text-decoration: none;
+            opacity: 0.7;
+        }
+        
+        .left:hover,
+        .right:hover {
+            opacity: 0.9;
+        }
+        
+        .left {
+            left: 20px;
+        }
+        
+        .right {
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li style="display: block"><img src="images/1.jpg" alt=""></li>
+            <li><img src="images/2.jpg" alt=""></li>
+            <li><img src="images/3.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+            <li><img src="images/5.jpg" alt=""></li>
+            <li><img src="images/6.jpg" alt=""></li>
+            <li><img src="images/7.jpg" alt=""></li>
+            <li><img src="images/8.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ol>
+        <a href="javascript:;" class="left">&lt;</a>
+        <a href="javascript:;" class="right">&gt;</a>
+    </div>
+    <script>
+        // var aPic = document.querySelectorAll("ul li");
+        // var aCircle = document.querySelectorAll("ol li");
+        // var nav = document.querySelector(".nav");
+        // var left = document.querySelector(".left");
+        // var right = document.querySelector(".right");
+        // var num = 0;
+        // var timer;
+        // for (var i = 0; i < aCircle.length; i++) {
+        //     aCircle[i].index = i;
+        //     aCircle[i].onmouseover = function() {
+        //         num = this.index;
+        //         lunbo();
+        //     }
+        // }
+        // right.onclick = function() {
+        //     if (num < 7) num++;
+        //     else num = 0;
+        //     lunbo();
+        // }
+        // left.onclick = function() {
+        //     if (num > 0) num--;
+        //     else num = 7;
+        //     lunbo();
+        // }
+
+        // function lunbo() {
+        //     for (var i = 0; i < aCircle.length; i++) {
+        //         aCircle[i].className = "";
+        //         aPic[i].style.display = "none";
+        //     }
+        //     aCircle[num].className = "active";
+        //     aPic[num].style.display = "block";
+        // }
+        // timer = setInterval(function() {
+        //     right.onclick();
+        // }, 1500);
+        // nav.onmouseover = function() {
+        //     clearInterval(timer);
+        // }
+        // nav.onmouseout = function() {
+        //     timer = setInterval(function() {
+        //         right.onclick();
+        //     }, 1500);
+        // }
+
+        var aPic = document.querySelectorAll("ul li");
+        var aCricle = document.querySelectorAll("ol li");
+        var nav = document.querySelector(".nav");
+        var left = document.querySelector(".left");
+        var right = document.querySelector(".right");
+        var num = 0;
+        var timer;
+        for (var i = 0; i < aCricle.length; i++) {
+            aCricle[i].index = i;
+            aCricle[i].onmouseover = function() {
+                num = this.index;
+                lunbo();
+            }
+        }
+        left.onclick = function() {
+            if (num > 0) num--;
+            else num = 7;
+            lunbo();
+        }
+        right.onclick = function() {
+            if (num < 7) num++;
+            else num = 0;
+            lunbo();
+        }
+
+        function lunbo() {
+            for (var i = 0; i < aCricle.length; i++) {
+                aCricle[i].className = "";
+                aPic[i].style.display = "none";
+            }
+            aCricle[num].className = "active";
+            aPic[num].style.display = "block";
+        }
+        timer = setInterval(function() {
+            right.onclick();
+        }, 1000);
+        nav.onmouseover = function() {
+            clearInterval(timer);
+        }
+        nav.onmouseout = function() {
+            timer = setInterval(function() {
+                right.onclick();
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

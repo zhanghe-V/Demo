@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>分享</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0 10px;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        h2 {
+            cursor: pointer;
+        }
+        
+        p {
+            display: none;
+            color: red
+        }
+        
+        #box {
+            width: 300px;
+            height: 60px;
+            border: 5px solid red;
+            margin: 100px auto;
+            color: #ff0000;
+            line-height: 60px;
+            text-align: center;
+            font-size: 40px;
+            position: fixed;
+            right: 50px;
+            top: 30%;
+        }
+        
+        div {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">随机点名</div>
+    <ul>
+        <li>
+            <h2>
+                1.(1)alert(typeof '56'); <br> &nbsp;&nbsp;&nbsp;(2)alert(isNaN('56')); <br> &nbsp;&nbsp;&nbsp;(3)alert(0.2 + 0.4 == 0.6); <br> &nbsp;&nbsp;&nbsp;(4)alert(Boolean('0'));
+                <br>
+            </h2>
+            <p>
+                答案：<br>1.string ''或""包起来的都是字符串<br> 2.false inNaN存在隐式转换，将字符串转换为数字 <br>3.0.6000000000000001 精度问题 <br>4.true '0'是字符串
+            </p>
+        </li><br/>
+
+        <li>
+            <h2>2.var s = 'hello';<br> &nbsp;&nbsp;&nbsp;s.pro = 'world';<br> &nbsp;&nbsp;&nbsp;console.log(s.pro+s);
+                <br>
+
+            </h2>
+            <p>
+                答案： undefinedhello <br>考察对象的赋值；很明显第一行声明了变量s只是一个字符串。所以s.pro是不成立的。</p>
+        </li><br/>
+
+
+        <li>
+            <h2>
+                3.var foo = { <br>&nbsp;&nbsp;&nbsp; name: 'fooname', <br>&nbsp;&nbsp;&nbsp;getName: function() { <br>&nbsp;&nbsp;&nbsp; return this.name<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br> &nbsp;&nbsp;&nbsp; } <br> &nbsp;&nbsp;&nbsp; alert(foo.getName());
+                <div>
+                    <div id="scdiv"></div>
+                </div>
+            </h2>
+            <p>
+                答案： fooname <br>this => foo<br>当函数被保存为对象的一个属性时，成该函数为该对象的方法。函数中this的值为该对象。
+                <br/>
+
+            </p>
+        </li>
+
+        <li>
+            <h2>4.var glob = 100;<br> &nbsp;&nbsp;&nbsp; console.log(test);<br>&nbsp;&nbsp;&nbsp; function test() {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var glob = 100;<br> &nbsp;&nbsp;&nbsp; }<br> function test() {<br> &nbsp;&nbsp;&nbsp; console.log(glob);
+                <br> &nbsp;&nbsp;&nbsp; glob = 200;<br> &nbsp;&nbsp;&nbsp; function glob() {};<br> &nbsp;&nbsp;&nbsp; console.log(glob); <br> &nbsp;&nbsp;&nbsp; var glob; <br> &nbsp;&nbsp;&nbsp; console.log(glob); <br> &nbsp;&nbsp;&nbsp;}<br>console.log(test());
+
+            </h2>
+            <p>
+                答案：test() { console.log(glob); glob = 200; function glob() {}; console.log(glob); var glob; console.log(glob); }
+                <br>glob() {}<br>200<br>200<br>undefined
+            </p>
+        </li>
+    </ul>
+
+    <script type="text/javascript">
+        var arrname = ['邹榛', '金蕾', '陆嵘', '杨康乐', '陈晓斌', '宋泽文', '塔伊尔.奥斯曼', '张玉芹', '杨超', '吴国建', '王伟强', '李亚南', '段瑞杰', '项祉铭', '袁宁博', '王威', '元蓓', '胡江民', '刘超', '冯杨涛', '李莉', '李勇', '钱慧珍', '鲍御', '薇文辉', '卢雪晴', '耿春文', '彭文品', '张成龙', '程军港', '胡文杰', '杜亚欣', '袁帅博', '乔俊华', '段冬毅', '吴晨敏', '彭文欣', '高宇鑫', '李强', '王立铭', '吕明杰', '章圣浪', '陈俊', '陈德良', '时析序', '黄步威', '黄慧姝', '余超', '艾平飞', '刘海韬', '张贺', '胡熠晨', '应宇峰'];
+        var oBox = document.getElementById('box');
+        var num = 0;
+        var timer = null;
+        var bstop = true;
+
+        function ranName() {
+            num = parseInt(Math.random() * arrname.length); //0-11
+            oBox.innerHTML = arrname[num];
+        }
+
+        timer = setInterval(ranName, 1);
+
+        //通过空格键控制开始和停止
+        document.onkeydown = function(event) { //event:事件对象   keyCode:获取键码
+            if (event.keyCode == 32 && bstop) {
+                clearInterval(timer);
+                bstop = false;
+            } else {
+                timer = setInterval(ranName, 5);
+                bstop = true;
+            }
+        }
+
+        var oH2 = document.getElementsByTagName('h2');
+        var oP = document.getElementsByTagName('p');
+        var tstop = true;
+        for (var i = 0; i < oH2.length; i++) {
+            oH2[i].onclick = function() {
+                if (tstop) {
+                    this.nextElementSibling.style.display = 'block';
+                    tstop = !tstop;
+                } else {
+                    this.nextElementSibling.style.display = 'none';
+                    tstop = !tstop;
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>
