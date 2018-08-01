@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 100px;
+            position: absolute;
+            overflow: hidden;
+            display: none;
+        }
+        
+        li:nth-of-type(1) {
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            1.中国嫦娥飞天的一些感想
+        </li>
+        <li>
+            2.中国是世界上最强大的国家
+        </li>
+    </ul>
+    <div>
+        Lorem ipsum dolor sit amet conse ctetur, adipis icing elit. Volup tatum eni raesentium et illo. Est eius molestiae nisi recusandae animi ipsum ea non ut dignissimos ab!
+    </div>
+    <script>
+        var aLi = document.querySelectorAll("li");
+        var oBox = document.querySelector("div");
+        //for (i = 0; i < aLi.length; i++) {
+        aLi[0].onmousemove = function(event) {
+                var event = event || window.event;
+                var x = event.pageX;
+                var y = event.pageY;
+                oBox.style.left = x + 20 + "px";
+                oBox.style.top = y + 20 + "px";
+                //oBox.style.display = "block";
+            }
+            //}
+        aLi[0].onmouseout = function() {
+            oBox.style.display = "none";
+        }
+        aLi[0].onmouseover = function() {
+            oBox.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

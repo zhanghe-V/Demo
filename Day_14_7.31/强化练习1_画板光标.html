@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #canv {
+            width: 956px;
+            height: 440px;
+            position: absolute;
+            left: 12px;
+            top: 174px;
+            background: lightgreen;
+        }
+        
+        p {
+            position: absolute;
+            top: 600px;
+            left: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/QQ截图20180731165214.jpg" alt="">
+        <div id="canv"></div>
+        <p><span id="span">000,000</span>像素</p>
+    </div>
+    <script>
+        var oCanv = document.querySelector("#canv");
+        var oSpan = document.querySelector("#span");
+        oCanv.onmousemove = function(event) {
+            var str = "";
+            var event = event || window.event;
+            var x = event.offsetX;
+            var y = event.offsetY;
+            str = x + "," + y;
+            oSpan.innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>
