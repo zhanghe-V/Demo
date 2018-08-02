@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../_工具箱/funPackage.js"></script>
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            background: lightblue;
+            left: 450px;
+            top: 300px;
+            padding: 3px;
+            /* border: 50px solid lightcoral; */
+        }
+        
+        .d2 {
+            width: 100px;
+            height: 100px;
+            /* position: absolute;
+            background: lightblue;
+            left: 450px;
+            top: 300px; */
+            padding: 3px;
+            background: lightcoral;
+            /* border: 50px solid lightcoral; */
+        }
+        
+        body {
+            width: 100%;
+            height: 1500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        <div class="d2"></div>
+    </div>
+
+    <script>
+        var d1 = document.querySelector(".d1");
+        var d2 = document.querySelector(".d2");
+        // d1.onclick = function(e) {
+        //     e = e || window.event;
+        //     //console.log(e.clientX);
+        //     //console.log(e.clientY);
+
+        //     //console.log(d1.clientWidth); //106 2padding+content
+
+        //     // console.log(d1.offsetWidth); //206 2border+2padding+content
+
+        //     //console.log(d1.offsetLeft); //206 2border+2padding+content
+        //     //console.log(d1.offsetTop); //206 2border+2padding+content
+
+
+        //     //console.log(document.body.clientWidth); //1903
+        //     //console.log(document.documentElement.clientWidth); //1903
+
+
+        // }
+
+        // function hit(obj1, obj2) {
+        //     if ((obj1.offsetLeft + obj1.offsetWidth >= obj2.offsetLeft) &&
+        //         (obj1.offsetLeft < obj2.offsetWidth + obj2.offsetLeft) &&
+        //         (obj1.offsetTop + obj1.offsetHeight >= obj2.offsetTop) &&
+        //         (obj1.offsetTop < obj2.offsetHeight + obj2.offsetTop)) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+        // // console.log(ranNum(50, 60));
+        // drag(d1);
+        // drag(d2);
+
+        // function fn() {
+        //     if (hit(d1, d2)) {
+        //         d2.style.background = "pink";
+        //     } else {
+        //         d2.style.background = "red";
+        //     }
+        // }
+
+        // document.onmousemove = function(e) {
+        //     console.log(getattr(d1, "background"))
+        // }
+
+        function getid(e) {
+            alert(this.className);
+            //stoppropagation(e);
+        }
+        // d1.onclick = getid;
+        // d2.onclick = getid;
+        addEvent(d2, "click", getid, false);
+    </script>
+</body>
+
+</html>

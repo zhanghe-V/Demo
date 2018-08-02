@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1,
+        .box2 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        
+        .box1 {
+            left: 100px;
+            top: 100px;
+            background: lightcoral;
+        }
+        
+        .box2 {
+            left: 800px;
+            top: 300px;
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <script>
+        var oBox1 = document.querySelector(".box1");
+        var oBox2 = document.querySelector(".box2");
+        var shortx;
+        var shorty;
+        var index = 1;
+        drag(oBox1);
+        drag(oBox2);
+
+        function drag(obj) {
+            obj.onmousedown = function(e) {
+                e = e || window.event;
+                shortx = e.offsetX;
+                shorty = e.offsetY;
+                obj.style.zIndex = ++index;
+                document.onmousemove = function(e) {
+                    e = e || window.event;
+                    obj.style.left = (e.clientX - shortx) + "px";
+                    obj.style.top = (e.clientY - shorty) + "px";
+
+                    // if ((oBox1.offsetLeft + oBox1.offsetWidth >= oBox2.offsetLeft) &&
+                    //     (oBox1.offsetLeft <= oBox2.offsetLeft + oBox2.offsetWidth) &&
+                    //     (oBox1.offsetTop + oBox1.offsetHeight >= oBox2.offsetTop) &&
+                    //     (oBox1.offsetTop <= oBox2.offsetTop + oBox2.offsetHeight)) {
+                    //     oBox2.style.background = "pink";
+                    // } else {
+                    //     oBox2.style.background = "lightblue";
+                    // }
+
+                    if (hit(oBox1, oBox2)) {
+                        oBox2.style.background = "pink";
+                    } else {
+                        oBox2.style.background = "lightblue";
+                    }
+
+                }
+                document.onmouseup = function() {
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                }
+                return false;
+            }
+        }
+
+
+        function hit(obj1, obj2) { //碰撞判断
+            if ((obj1.offsetLeft + obj1.offsetWidth >= obj2.offsetLeft) && (obj1.offsetLeft <= obj2.offsetLeft + obj2.offsetWidth) &&
+                (obj1.offsetTop + obj1.offsetHeight >= obj2.offsetTop) && (obj1.offsetTop <= obj2.offsetTop + obj2.offsetHeight)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // function drag(obj) {
+        //     obj.onmousedown = function(e) {
+        //         e = e || window.event;
+        //         shortx = e.offsetX;
+        //         shorty = e.offsetY;
+        //         document.onmousemove = function(e) {
+        //             e = e || window.event;
+        //             obj.style.left = (e.clientX - shortx) + "px";
+        //             obj.style.top = (e.clientY - shorty) + "px";
+
+        //             if (hit(oBox1, oBox2)) {
+        //                 oBox2.style.background = "pink"
+        //             } else {
+        //                 oBox2.style.background = "lightblue";
+        //             }
+        //         }
+        //         document.onmouseup = function() {
+        //             document.onmousemove = null;
+        //             document.onmouseup = null;
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

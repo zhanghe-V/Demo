@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .d1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="d1"></div> -->
+    <script>
+        createBox();
+        // var d1 = document.querySelector(".d1");
+        // drag(d1);
+
+        function ranNum(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function createBox() {
+            document.onkeydown = function() {
+                var cdiv = document.createElement("div");
+                cdiv.style.cssText = "width: " + ranNum(50, 100) + 'px;height:' + ranNum(50, 100) + 'px;position:absolute;left:' +
+                    ranNum(0, document.documentElement.offsetWidth - 100) + 'px;top:' + ranNum(0, document.documentElement.offsetHeight - 100) +
+                    'px;background:rgba(' + ranNum(0, 255) + ',' + ranNum(0, 255) + ',' + ranNum(0, 255) + ');';
+                document.body.appendChild(cdiv);
+                drag(cdiv);
+            }
+        }
+
+        function drag(obj) {
+            var shortx;
+            var shorty;
+            obj.onmousedown = function(e) {
+                e.stopPropagation();
+                e = e || window.event;
+                shortx = e.offsetX;
+                shorty = e.offsetY;
+                document.onmousemove = function(e) {
+                    e = e || window.event;
+                    obj.style.left = (e.clientX - shortx) + 'px';
+                    obj.style.top = (e.clientY - shorty) + 'px';
+                }
+                document.onmouseup = function() {
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                }
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
