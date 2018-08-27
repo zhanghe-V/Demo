@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="checkall">全选 <br>
+    <input type="checkbox" name="">1 <br>
+    <input type="checkbox" name="">2 <br>
+    <input type="checkbox" name="">3 <br>
+    <input type="checkbox" name="">4 <br>
+    <input type="checkbox" name="">8 <br>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $('#checkall').click(function() {
+            if ($(this).prop('checked')) {
+                $($(this)).siblings('input').not($(this)).prop('checked', true);
+                //$('input').prop('checked', true);
+            } else {
+                $($(this)).siblings('input').not($(this)).prop('checked', false);
+            }
+        });
+
+        let $len = $('input').not('#checkall').length;
+        $('input').not('#checkall').click(function() {
+            if ($('input:checked').not('#checkall').length == $len) {
+                $('#checkall').prop('checked', true);
+            } else {
+                $('#checkall').prop('checked', false);
+            }
+        });
+    </script>
+</body>
+
+</html>

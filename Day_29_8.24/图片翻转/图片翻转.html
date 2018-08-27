@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>图片翻牌旋转特效</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        #brand {
+            width: 330px;
+            height: 400px;
+            border: 1px solid #dddddd;
+            box-shadow: 0px 0px 5px #dddddd;
+            margin: 30px auto;
+        }
+        
+        #brand .title {
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            font-size: 16px;
+            margin-top: 4px;
+            border-bottom: 2px solid #33261c;
+            text-align: center;
+            color: #33261c;
+        }
+        
+        #brand .bd-box {
+            width: 284px;
+            height: 358px;
+            overflow: hidden;
+            padding: 0px 24px;
+        }
+        
+        #brand .bd-box li {
+            float: left;
+            width: 122px;
+            height: 77px;
+            overflow: hidden;
+            position: relative;
+            margin: 10px 10px 0px 10px;
+        }
+        
+        #brand .bd-box li img {
+            width: 120px;
+            height: 75px;
+            border: 1px solid #e9e8e8;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 2;
+            overflow: hidden;
+        }
+        
+        #brand .bd-box li span {
+            width: 120px;
+            height: 0px;
+            border: 1px solid #e9e8e8;
+            position: absolute;
+            left: 0px;
+            top: 38px;
+            z-index: 1;
+            text-align: center;
+            line-height: 75px;
+            font-size: 14px;
+            color: #FFF;
+            background: #ffa340;
+            font-weight: bold;
+            overflow: hidden;
+            display: none;
+        }
+        
+        #brand .bd-box li a {
+            width: 120px;
+            height: 75px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 3;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <script>
+        //1.next([expr])紧邻的后面同辈元素的元素集合。
+        //2.prev([expr])紧邻的前一个同辈元素的元素集合。
+
+
+
+        // $(function() {
+        //     $('.bd-box li').hover(function() {
+        //         var $img = $(this).find('img');
+        //         $img.animate({
+        //             height: 0,
+        //             top: 37
+        //         }, function() {
+        //             $img.hide();
+        //             $img.next('span').show().animate({
+        //                 height: 75,
+        //                 top: 0
+        //             });
+        //         });
+        //     }, function() {
+        //         var $span = $(this).find('span');
+        //         $span.animate({
+        //             height: 0,
+        //             top: 37
+        //         }, function() {
+        //             $span.hide();
+        //             $span.prev('img').show().animate({
+        //                 height: 75,
+        //                 top: 0
+        //             });
+        //         });
+        //     })
+        // });
+
+        // $(function() {
+        //     $(".bd-box li").hover(function() {
+        //         var $img = $(this).find("img");
+        //         $img.stop().animate({
+        //             height: 0,
+        //             top: 37
+        //         }, function() {
+        //             $img.hide();
+        //             $img.next('span').show().animate({
+        //                 top: 0,
+        //                 height: 75
+        //             });
+        //         });
+        //     }, function() {
+        //         var $span = $(this).find("span");
+        //         $span.stop().animate({
+        //             height: 0,
+        //             top: 37
+        //         }, function() {
+        //             $span.hide;
+        //             $span.prev('img').show().stop().animate({
+        //                 height: 75,
+        //                 top: 0
+        //             })
+        //         });
+        //     });
+        // });
+
+        $(function() {
+            $('.bd-box li').hover(function() {
+                let $img = $(this).find('img');
+                $img.animate({
+                    height: 0,
+                    top: 38
+                }, function() {
+                    $img.hide();
+                    $img.next('span').show().animate({
+                        top: 0,
+                        height: 75
+                    })
+                })
+            }, function() {
+                let $span = $(this).find('span');
+                $span.animate({
+                    height: 0,
+                    top: 38
+                }, function() {
+                    $span.hide();
+                    $span.prev('img').show().animate({
+                        top: 0,
+                        height: 75
+                    })
+                })
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="brand">
+        <div class='title'>
+            热门品牌推荐
+        </div>
+        <ul class='bd-box'>
+            <li>
+                <a href="##"> </a>
+                <img src="images/1.jpg" />
+                <span>肌龄</span>
+            </li>
+            <li>
+                <a href="##"> </a>
+                <img src="images/2.jpg" />
+                <span>肌龄</span>
+            </li>
+            <li>
+                <a href="##"> </a>
+                <img src="images/3.jpg" />
+                <span>肌龄</span>
+            </li>
+            <li>
+                <a href="##"> </a>
+                <img src="images/4.jpg" />
+                <span>肌龄</span>
+            </li>
+            <li>
+                <a href="##"> </a>
+                <img src="images/5.jpg" />
+                <span>肌龄</span>
+            </li>
+            <li>
+                <a href="##"> </a>
+                <img src="images/6.jpg" />
+                <span>肌龄</span>
+            </li>
+            <li>
+                <a href="##"> </a>
+                <img src="images/7.jpg" />
+                <span>肌龄</span>
+            </li>
+            <li>
+                <a href="##"> </a>
+                <img src="images/8.jpg" />
+                <span>肌龄</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

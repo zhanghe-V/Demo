@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        body {
+            background: #ccc;
+        }
+        
+        .box {
+            background: #fff;
+            width: 350px;
+            height: 160px;
+            border: 1px solid red;
+            margin: 30px auto;
+        }
+        
+        .box .btn {
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px solid red;
+        }
+        
+        .box .btn a {
+            text-decoration: none;
+            color: #333;
+            width: 70px;
+            text-align: center;
+            display: block;
+            float: left;
+        }
+        
+        .box ul {
+            display: none;
+        }
+        
+        .box li {
+            list-style: none;
+            line-height: 30px;
+            padding-left: 10px;
+        }
+        
+        .box .btn a.active {
+            /*当前选择的模块*/
+            background: red;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="btn">
+            <a href="#" class="active">公告</a>
+            <a href="#">规则</a>
+            <a href="#">论坛</a>
+            <a href="#">安全</a>
+            <a href="#">公益</a>
+        </div>
+        <div class="content">
+            <ul style="display: block;">
+                <li>公告四重曝光互动新玩法</li>
+                <li>公告四重曝光互动新玩法</li>
+                <li>公告四重曝光互动新玩法</li>
+                <li>公告四重曝光互动新玩法</li>
+            </ul>
+            <ul>
+                <li>规则卖家如何设置公益宝贝</li>
+                <li>规则卖家如何设置公益宝贝</li>
+                <li>规则卖家如何设置公益宝贝</li>
+                <li>规则卖家如何设置公益宝贝</li>
+            </ul>
+            <ul>
+                <li>论坛项目如何入驻公益宝贝</li>
+                <li>论坛项目如何入驻公益宝贝</li>
+                <li>论坛项目如何入驻公益宝贝</li>
+                <li>论坛项目如何入驻公益宝贝</li>
+            </ul>
+            <ul>
+                <li>安全公益宝贝卖家捐赠票据</li>
+                <li>安全公益宝贝卖家捐赠票据</li>
+                <li>安全公益宝贝卖家捐赠票据</li>
+                <li>安全公益宝贝卖家捐赠票据</li>
+            </ul>
+            <ul>
+                <li>公益卖家注意：风险通报售假获刑又起诉！</li>
+                <li>公益卖家注意：风险通报售假获刑又起诉！</li>
+                <li>公益卖家注意：风险通报售假获刑又起诉！</li>
+                <li>公益卖家注意：风险通报售假获刑又起诉！</li>
+            </ul>
+        </div>
+    </div>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        //index()索引
+        $(function() {
+            $('.btn a').click(function() {
+                $(this).addClass('active').siblings('.btn a').removeClass('active');
+                $('.content ul').eq($(this).index()).show().siblings('.content ul').hide();
+            });
+        });
+    </script>
+</body>
+
+</html>
