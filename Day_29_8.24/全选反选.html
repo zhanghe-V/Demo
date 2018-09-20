@@ -20,7 +20,7 @@
     <script src="jquery-3.3.1.js"></script> 
     <script>
         $('#checkall').click(function() {
-            if ($(this).prop('checked')) {
+            if ($(this).prop('checked')) { 
                 $($(this)).siblings('input').not($(this)).prop('checked', true);
                 //$('input').prop('checked', true);
             } else {
